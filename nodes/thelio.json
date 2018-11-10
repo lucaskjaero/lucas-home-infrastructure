@@ -1,0 +1,18 @@
+{
+  "name": "thelio",
+  "chef_type": "node",
+  "json_class": "Chef::Node",
+  "chef_environment": "_default",
+  "run_list": [],
+  "automatic": {
+    "ipaddress": "192.168.51.115",
+    "hostname": "thelio",
+    "fqdn": "thelio.local",
+    "os": "linux",
+    "os_version": "4.15.0-38-generic",
+    "platform": "ubuntu",
+    "platform_version": "18.04",
+    "platform_family": "debian",
+    "recipes": []
+  }
+}
