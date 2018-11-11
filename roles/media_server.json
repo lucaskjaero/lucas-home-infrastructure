@@ -1,6 +1,6 @@
 {
-  "name": "linux_base",
-  "description": "Things that should be on every linux machine I own",
+  "name": "media_server",
+  "description": "A server for keeping media",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "run_list": [

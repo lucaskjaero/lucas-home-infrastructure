@@ -11,4 +11,10 @@ platforms:
 suites:
   - name: default
     run_list:
+      - role[media_server.json]
     attributes:
+      chef_client:
+        conf_dir: "/etc/chef"
+      plex:
+        channel: "plexpass"
+        token: "KqHuz9kXEgYAuvyQpNrf"
