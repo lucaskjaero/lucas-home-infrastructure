@@ -15,6 +15,3 @@ run_list 'recipe[plex]'
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
 cookbook 'plex', '~> 0.2.3', :supermarket
-
-# Plex attributes
-node['plex']['channel'] = "plexpass"
