@@ -1,6 +1,9 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["forwarded_port", {guest: 32400, host: 32400}]
+    - ["private_network", {ip: "192.168.33.33"}]
 
 provisioner:
   name: chef_zero
@@ -10,11 +13,8 @@ platforms:
 
 suites:
   - name: default
-    run_list:
-      - role[media_server.json]
+    provisioner:
+      policyfile: policies/media_server/default.rb
     attributes:
       chef_client:
         conf_dir: "/etc/chef"
-      plex:
-        channel: "plexpass"
-        token: "KqHuz9kXEgYAuvyQpNrf"
