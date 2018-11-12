@@ -1,0 +1,74 @@
+{
+  "revision_id": "10ede55abf6f74c347375804caa388c5489e4eccddac2a2afddb79e395ca4bcb",
+  "name": "media_server",
+  "run_list": [
+    "recipe[plex::default]",
+    "recipe[atlantis_ftp_connection::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "atlantis_ftp_connection": {
+      "version": "0.1.0",
+      "identifier": "50959a4e862ac8276daf76f3565cb14efda6a0a5",
+      "dotted_decimal_identifier": "22682488111770312.11098124474078812.194952821121189",
+      "source": "../../cookbooks/atlantis_ftp_connection",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "44ecc5694ee92697366dbd3ce462da27b5e2b910",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/atlantis_ftp_connection"
+      }
+    },
+    "plex": {
+      "version": "0.2.3",
+      "identifier": "710c04741a87878b908b1d231350cbc3e6c9832d",
+      "dotted_decimal_identifier": "31819885635602311.39283948926473040.224042251027245",
+      "cache_key": "plex-0.2.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/plex/versions/0.2.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/plex/versions/0.2.3/download",
+        "version": "0.2.3"
+      }
+    }
+  },
+  "default_attributes": {
+    "plex": {
+      "channel": "plexpass",
+      "token": "KqHuz9kXEgYAuvyQpNrf"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "atlantis_ftp_connection",
+        ">= 0.0.0"
+      ],
+      [
+        "plex",
+        "= 0.2.3"
+      ]
+    ],
+    "dependencies": {
+      "atlantis_ftp_connection (0.1.0)": [
+
+      ],
+      "plex (0.2.3)": [
+
+      ]
+    }
+  }
+}
