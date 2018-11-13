@@ -1,5 +1,5 @@
 {
-  "revision_id": "a6043643e0de5c824869d8383c9c29efd2f4a735f7486161126d12a9bbd717a4",
+  "revision_id": "e85f38a2c6eb76e043bce27c0bbdeded74d3bf94ebb35dd3129ef283f4687fd3",
   "name": "media_server",
   "run_list": [
     "recipe[plex::default]",
@@ -24,14 +24,14 @@
     },
     "atlantis_ftp_connection": {
       "version": "0.1.0",
-      "identifier": "9dc62676c29a4319e36ce430e5e8c2f18832d907",
-      "dotted_decimal_identifier": "44409439847094851.7286931242149352.214342627940615",
+      "identifier": "8f693301f9fa840b691cfd63ea97ef5112cc88fd",
+      "dotted_decimal_identifier": "40366589467032196.3211797975001751.263131486783741",
       "source": "../../cookbooks/atlantis_ftp_connection",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "b9b80540e19a7396f2e077a23520534800c3b432",
+        "revision": "8988e9b8942e9b403b483057c598d0ea2b763fe8",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -52,6 +52,17 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
         "version": "0.1.2"
+      }
+    },
+    "line": {
+      "version": "2.1.1",
+      "identifier": "7e04d2a949185422fafa4338cade7c4448a256a1",
+      "dotted_decimal_identifier": "35471149895325780.9846101984725726.136632718218913",
+      "cache_key": "line-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
+        "version": "2.1.1"
       }
     },
     "plex": {
@@ -101,6 +112,10 @@
         "= 0.1.2"
       ],
       [
+        "line",
+        "= 2.1.1"
+      ],
+      [
         "plex",
         "= 0.2.3"
       ],
@@ -114,7 +129,10 @@
 
       ],
       "atlantis_ftp_connection (0.1.0)": [
-
+        [
+          "line",
+          ">= 0.0.0"
+        ]
       ],
       "fuse (0.1.2)": [
         [
@@ -125,6 +143,9 @@
           "yum",
           ">= 0.0.0"
         ]
+      ],
+      "line (2.1.1)": [
+
       ],
       "plex (0.2.3)": [
 
