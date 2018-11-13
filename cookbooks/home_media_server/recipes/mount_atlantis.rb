@@ -1,6 +1,6 @@
 #
-# Cookbook:: atlantis_ftp_connection
-# Recipe:: default
+# Cookbook:: home_media_server
+# Recipe:: mount_atlantis
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 

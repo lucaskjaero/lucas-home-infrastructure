@@ -1,11 +1,12 @@
 {
-  "revision_id": "3011daf567b1d12ee0ca28714b922db2ad7ac51c15751e410cf6d82dc2ec3b1f",
+  "revision_id": "bc58e5e10b99671c0e06d10e9bc35e839e3d97e9733f8dc9e67420658df96a14",
   "name": "media_server",
   "run_list": [
     "recipe[plex::default]",
     "recipe[fuse::default]",
     "recipe[fuse::sshfs]",
-    "recipe[home_media_server::mount_atlantis]"
+    "recipe[home_media_server::mount_atlantis]",
+    "recipe[home_media_server::sonarr]"
   ],
   "included_policy_locks": [
 
@@ -22,6 +23,17 @@
         "version": "7.1.1"
       }
     },
+    "docker": {
+      "version": "4.6.7",
+      "identifier": "f9de60397141caa7a4aa07753b5bff4ebc83f6eb",
+      "dotted_decimal_identifier": "70331774062903754.47187371287198555.280713635297003",
+      "cache_key": "docker-4.6.7-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.7/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.7/download",
+        "version": "4.6.7"
+      }
+    },
     "fuse": {
       "version": "0.1.2",
       "identifier": "198b3fac1a1d7c4cbda3df537e89b5495ac9de32",
@@ -35,14 +47,14 @@
     },
     "home_media_server": {
       "version": "0.1.0",
-      "identifier": "74149bbc1de23171a09e2b870fa2003381915851",
-      "dotted_decimal_identifier": "32673756406997553.31983273563852706.221217118289",
+      "identifier": "10f8538f81fff1eb59347006ee9be0dbeffb4461",
+      "dotted_decimal_identifier": "4776637401006065.66244701279678107.247235228681313",
       "source": "../../cookbooks/home_media_server",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "ffa13a7b803e48d335df657df7f68fafc5332c79",
+        "revision": "006a50981d25482c9757102f6e597b56fa094a0c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -104,6 +116,10 @@
         "= 7.1.1"
       ],
       [
+        "docker",
+        "= 4.6.7"
+      ],
+      [
         "fuse",
         "= 0.1.2"
       ],
@@ -128,6 +144,9 @@
       "apt (7.1.1)": [
 
       ],
+      "docker (4.6.7)": [
+
+      ],
       "fuse (0.1.2)": [
         [
           "apt",
@@ -141,6 +160,10 @@
       "home_media_server (0.1.0)": [
         [
           "line",
+          ">= 0.0.0"
+        ],
+        [
+          "docker",
           ">= 0.0.0"
         ]
       ],
