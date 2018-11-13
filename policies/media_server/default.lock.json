@@ -1,24 +1,37 @@
 {
-  "revision_id": "7ffa7f675801c7cab5c776d7c9ce8b0197c8872a77b74f66e9ab0da812640ece",
+  "revision_id": "a6043643e0de5c824869d8383c9c29efd2f4a735f7486161126d12a9bbd717a4",
   "name": "media_server",
   "run_list": [
     "recipe[plex::default]",
+    "recipe[fuse::default]",
+    "recipe[fuse::sshfs]",
     "recipe[atlantis_ftp_connection::default]"
   ],
   "included_policy_locks": [
 
   ],
   "cookbook_locks": {
+    "apt": {
+      "version": "7.1.1",
+      "identifier": "3bf6cee65c6c91539609905d0cb86f6d5700e05c",
+      "dotted_decimal_identifier": "16878392114441361.23527390887873720.122515401793628",
+      "cache_key": "apt-7.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.1.1/download",
+        "version": "7.1.1"
+      }
+    },
     "atlantis_ftp_connection": {
       "version": "0.1.0",
-      "identifier": "e735d509a77d3d3e0faeea4e7cd538b00d6417a7",
-      "dotted_decimal_identifier": "65079908726439229.17468692485799125.62328790063015",
+      "identifier": "9dc62676c29a4319e36ce430e5e8c2f18832d907",
+      "dotted_decimal_identifier": "44409439847094851.7286931242149352.214342627940615",
       "source": "../../cookbooks/atlantis_ftp_connection",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "47f2bcf4ffbc5a106f22661632db8aebed56ddef",
+        "revision": "b9b80540e19a7396f2e077a23520534800c3b432",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -30,6 +43,17 @@
         "path": "../../cookbooks/atlantis_ftp_connection"
       }
     },
+    "fuse": {
+      "version": "0.1.2",
+      "identifier": "198b3fac1a1d7c4cbda3df537e89b5495ac9de32",
+      "dotted_decimal_identifier": "7189980004359548.21600609754119817.199326660419122",
+      "cache_key": "fuse-0.1.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+        "version": "0.1.2"
+      }
+    },
     "plex": {
       "version": "0.2.3",
       "identifier": "710c04741a87878b908b1d231350cbc3e6c9832d",
@@ -39,6 +63,17 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/plex/versions/0.2.3/download",
         "version": "0.2.3"
+      }
+    },
+    "yum": {
+      "version": "5.1.0",
+      "identifier": "705aaff4ddd04afff64efc8c738cfea4fd628e82",
+      "dotted_decimal_identifier": "31624909165547594.72046938166162316.279984579186306",
+      "cache_key": "yum-5.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+        "version": "5.1.0"
       }
     }
   },
@@ -54,19 +89,47 @@
   "solution_dependencies": {
     "Policyfile": [
       [
+        "apt",
+        "= 7.1.1"
+      ],
+      [
         "atlantis_ftp_connection",
         ">= 0.0.0"
       ],
       [
+        "fuse",
+        "= 0.1.2"
+      ],
+      [
         "plex",
         "= 0.2.3"
+      ],
+      [
+        "yum",
+        "= 5.1.0"
       ]
     ],
     "dependencies": {
+      "apt (7.1.1)": [
+
+      ],
       "atlantis_ftp_connection (0.1.0)": [
 
       ],
+      "fuse (0.1.2)": [
+        [
+          "apt",
+          ">= 0.0.0"
+        ],
+        [
+          "yum",
+          ">= 0.0.0"
+        ]
+      ],
       "plex (0.2.3)": [
+
+      ],
+      "yum (5.1.0)": [
 
       ]
     }

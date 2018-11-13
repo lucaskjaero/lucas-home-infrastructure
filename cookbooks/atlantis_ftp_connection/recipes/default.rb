@@ -13,9 +13,9 @@ directory '/Atlantis' do
   action :create
 end
 
-mount 'atlantis' do
-  device 'fuse'
-  enabled true
-  fstype 'sshfs#sanjid@atlantis.whatbox.ca:/home/sanjid/files'
-  mount_point '/Atlantis'
-end
+# mount 'atlantis' do
+#   device 'fuse'
+#   enabled true
+#   fstype 'sshfs#sanjid@atlantis.whatbox.ca:/home/sanjid/files'
+#   mount_point '/Atlantis'
+# end
