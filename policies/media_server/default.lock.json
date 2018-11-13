@@ -1,5 +1,5 @@
 {
-  "revision_id": "e85f38a2c6eb76e043bce27c0bbdeded74d3bf94ebb35dd3129ef283f4687fd3",
+  "revision_id": "e6b0c6a6c4b5f0f5578591c15f19fd9a630d9c3fbe48330000d39d6d7a5db078",
   "name": "media_server",
   "run_list": [
     "recipe[plex::default]",
@@ -24,14 +24,14 @@
     },
     "atlantis_ftp_connection": {
       "version": "0.1.0",
-      "identifier": "8f693301f9fa840b691cfd63ea97ef5112cc88fd",
-      "dotted_decimal_identifier": "40366589467032196.3211797975001751.263131486783741",
+      "identifier": "6ba4c07b461f96d79a38ee72fcc04d20d37b9482",
+      "dotted_decimal_identifier": "30298969116909462.60686689302150336.84803382383746",
       "source": "../../cookbooks/atlantis_ftp_connection",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "8988e9b8942e9b403b483057c598d0ea2b763fe8",
+        "revision": "276b6803c5eb366dce4b7d74a31e0d4fd047287c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
