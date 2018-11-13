@@ -1,9 +1,9 @@
-name 'atlantis_ftp_connection'
-maintainer 'The Authors'
+name 'home_media_server'
+maintainer 'Lucas Kjaero'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
-description 'Installs/Configures atlantis_ftp_connection'
-long_description 'Installs/Configures atlantis_ftp_connection'
+description 'Installs/Configures my home media server'
+long_description 'Installs/Configures my home media server'
 version '0.1.0'
 chef_version '>= 13.0'
 

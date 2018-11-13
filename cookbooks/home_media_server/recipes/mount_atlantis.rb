@@ -5,7 +5,7 @@
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
 user 'atlantis' do
-  comment 'A random user'
+  comment 'Service user to mount Atlantis'
   home '/home/atlantis'
   shell '/bin/bash'
   password 'atlantis'

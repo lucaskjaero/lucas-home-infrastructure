@@ -10,11 +10,11 @@ default_source :supermarket
 default['plex']['channel'] = 'plexpass'
 default['plex']['token'] = 'KqHuz9kXEgYAuvyQpNrf'
 
-run_list 'recipe[plex]', 'recipe[fuse]', 'recipe[fuse::sshfs]', 'recipe[atlantis_ftp_connection::default]'
+run_list 'recipe[plex]', 'recipe[fuse]', 'recipe[fuse::sshfs]', 'recipe[home_media_server::mount_atlantis]'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
 cookbook 'plex', '~> 0.2.3', :supermarket
 cookbook 'fuse', '~> 0.1.2', :supermarket
 
-cookbook 'atlantis_ftp_connection', path: '../../cookbooks/atlantis_ftp_connection'
+cookbook 'home_media_server', path: '../../cookbooks/home_media_server'
