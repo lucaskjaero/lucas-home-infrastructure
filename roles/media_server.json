@@ -1,9 +1,0 @@
-{
-  "name": "media_server",
-  "description": "A server for keeping media",
-  "json_class": "Chef::Role",
-  "chef_type": "role",
-  "run_list": [
-    "recipe[plex]"
-  ]
-}
