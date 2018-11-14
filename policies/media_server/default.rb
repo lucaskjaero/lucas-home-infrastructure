@@ -7,10 +7,8 @@
 name 'media_server'
 default_source :supermarket
 
-run_list 'recipe[fuse]', 'recipe[home_media_server::mount_atlantis]', 'recipe[home_media_server::plex_docker]', 'recipe[home_media_server::sonarr]'
+run_list 'recipe[home_media_server::mount_atlantis]', 'recipe[home_media_server::plex_docker]', 'recipe[home_media_server::sonarr]'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
-cookbook 'fuse', '~> 0.1.2', :supermarket
-
 cookbook 'home_media_server', path: '../../cookbooks/home_media_server'

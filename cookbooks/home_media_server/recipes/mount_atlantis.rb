@@ -4,6 +4,9 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
+include_recipe '::default'
+include_recipe 'fuse'
+
 package 'sshfs'
 
 # Mount atlantis here
@@ -31,11 +34,6 @@ cookbook_file '/root/.ssh/known_hosts' do
 end
 
 # Set up public key auth to connect to atlantis
-directory '/config' do
-  owner 'root'
-  mode '0777'
-  action :create
-end
 directory '/config/atlantis' do
   owner 'root'
   group 'root'

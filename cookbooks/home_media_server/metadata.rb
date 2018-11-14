@@ -7,5 +7,6 @@ long_description 'Installs/Configures my home media server'
 version '0.1.0'
 chef_version '>= 13.0'
 
-depends 'line' # Append line to file
 depends 'docker'
+depends 'fuse'
+depends 'line' # Append line to file

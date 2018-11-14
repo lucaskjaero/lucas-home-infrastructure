@@ -4,11 +4,7 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
-docker_installation_package 'default'
-
-docker_service_manager 'default' do
-  action :start
-end
+include_recipe '::default'
 
 user 'plex' do
   shell '/sbin/nologin'
@@ -17,13 +13,6 @@ user 'plex' do
   manage_home false
 end
 
-directory '/config' do
-  owner 'root'
-  group 'root'
-  mode '0777'
-  action :create
-  not_if { Dir.exist? '/config' }
-end
 directory '/config/plex' do
   owner 'plex'
   group 'plex'
@@ -37,13 +26,6 @@ directory '/transcode' do
   mode '0777'
   action :create
   not_if { Dir.exist? '/transcode' }
-end
-directory '/video' do
-  owner 'plex'
-  group 'plex'
-  mode '0777'
-  action :create
-  not_if { Dir.exist? '/video' }
 end
 
 docker_image "Plex image" do
