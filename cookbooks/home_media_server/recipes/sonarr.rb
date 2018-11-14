@@ -4,8 +4,6 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
-include_recipe '::default'
-
 user 'sonarr' do
   shell '/sbin/nologin'
   comment 'Service user for sonarr'

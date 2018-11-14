@@ -4,7 +4,6 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
-include_recipe '::default'
 include_recipe 'fuse'
 
 package 'sshfs'

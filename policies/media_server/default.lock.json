@@ -1,0 +1,160 @@
+{
+  "revision_id": "851ca7ea73ab52728757cce6e1e371a1b3d2bee53db13aba673374541275a316",
+  "name": "media_server",
+  "run_list": [
+    "recipe[home_media_server::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apt": {
+      "version": "7.1.1",
+      "identifier": "3bf6cee65c6c91539609905d0cb86f6d5700e05c",
+      "dotted_decimal_identifier": "16878392114441361.23527390887873720.122515401793628",
+      "cache_key": "apt-7.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.1.1/download",
+        "version": "7.1.1"
+      }
+    },
+    "docker": {
+      "version": "4.6.7",
+      "identifier": "f9de60397141caa7a4aa07753b5bff4ebc83f6eb",
+      "dotted_decimal_identifier": "70331774062903754.47187371287198555.280713635297003",
+      "cache_key": "docker-4.6.7-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.7/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.7/download",
+        "version": "4.6.7"
+      }
+    },
+    "fuse": {
+      "version": "0.1.2",
+      "identifier": "198b3fac1a1d7c4cbda3df537e89b5495ac9de32",
+      "dotted_decimal_identifier": "7189980004359548.21600609754119817.199326660419122",
+      "cache_key": "fuse-0.1.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+        "version": "0.1.2"
+      }
+    },
+    "home_media_server": {
+      "version": "0.1.0",
+      "identifier": "a8d7a00a3bcc5f0019b8fb91001eeafaeb49d9f9",
+      "dotted_decimal_identifier": "47524878453820511.28282285260830.258363410209273",
+      "source": "../../cookbooks/home_media_server",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "f623284e8d33994ba87cbcd1a7c53487c0481d52",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/home_media_server"
+      }
+    },
+    "line": {
+      "version": "2.1.1",
+      "identifier": "7e04d2a949185422fafa4338cade7c4448a256a1",
+      "dotted_decimal_identifier": "35471149895325780.9846101984725726.136632718218913",
+      "cache_key": "line-2.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
+        "version": "2.1.1"
+      }
+    },
+    "yum": {
+      "version": "5.1.0",
+      "identifier": "705aaff4ddd04afff64efc8c738cfea4fd628e82",
+      "dotted_decimal_identifier": "31624909165547594.72046938166162316.279984579186306",
+      "cache_key": "yum-5.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+        "version": "5.1.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apt",
+        "= 7.1.1"
+      ],
+      [
+        "docker",
+        "= 4.6.7"
+      ],
+      [
+        "fuse",
+        "= 0.1.2"
+      ],
+      [
+        "home_media_server",
+        ">= 0.0.0"
+      ],
+      [
+        "line",
+        "= 2.1.1"
+      ],
+      [
+        "yum",
+        "= 5.1.0"
+      ]
+    ],
+    "dependencies": {
+      "apt (7.1.1)": [
+
+      ],
+      "docker (4.6.7)": [
+
+      ],
+      "fuse (0.1.2)": [
+        [
+          "apt",
+          ">= 0.0.0"
+        ],
+        [
+          "yum",
+          ">= 0.0.0"
+        ]
+      ],
+      "home_media_server (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ],
+        [
+          "fuse",
+          ">= 0.0.0"
+        ],
+        [
+          "line",
+          ">= 0.0.0"
+        ]
+      ],
+      "line (2.1.1)": [
+
+      ],
+      "yum (5.1.0)": [
+
+      ]
+    }
+  }
+}
