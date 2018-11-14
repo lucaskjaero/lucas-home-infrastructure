@@ -38,12 +38,12 @@ directory '/transcode' do
   action :create
   not_if { Dir.exist? '/transcode' }
 end
-directory '/media' do
+directory '/video' do
   owner 'plex'
   group 'plex'
   mode '0777'
   action :create
-  not_if { Dir.exist? '/media' }
+  not_if { Dir.exist? '/video' }
 end
 
 docker_image "Plex image" do
@@ -57,7 +57,7 @@ docker_container 'Plex container' do
   repo 'plexinc/pms-docker'
   tag 'plexpass'
   network_mode 'host'
-  volumes ['/config/plex:/config', '/transcode:/transcode', '/media:/data']
+  volumes ['/config/plex:/config', '/transcode:/transcode', '/video:/data']
   env ['TZ="America/Los_Angeles"']
   action :run
 end
