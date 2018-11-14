@@ -1,6 +1,6 @@
 #
 # Cookbook:: home_media_server
-# Recipe:: sonarr
+# Recipe:: plex_docker
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 

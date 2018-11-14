@@ -1,5 +1,5 @@
 {
-  "revision_id": "290876320f872099b33a43fef879f42a90e7130c45546ea85e6ca2467c4c8ab0",
+  "revision_id": "b396a70eb73ac4d63113df4ab8bdc2ff82d1a04f1c4e2d707b93e20dbf30cb20",
   "name": "media_server",
   "run_list": [
     "recipe[fuse::default]",
@@ -47,14 +47,14 @@
     },
     "home_media_server": {
       "version": "0.1.0",
-      "identifier": "89d1325e934e61b4a45ab79eb84c5cefaa6e40e1",
-      "dotted_decimal_identifier": "38792086074642017.50846205342562380.102184426291425",
+      "identifier": "efd13f2ddeb42dbc9991282bad2c5374fc335894",
+      "dotted_decimal_identifier": "67502588716561453.53086144344861996.91761912535188",
       "source": "../../cookbooks/home_media_server",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "a3c330299c56917d42f39c0913345c4dbaaee1a4",
+        "revision": "b88b66a75cf5660902ccc4c90e9801cc70fa58f2",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
