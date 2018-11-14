@@ -7,10 +7,7 @@
 name 'media_server'
 default_source :supermarket
 
-default['plex']['channel'] = 'plexpass'
-default['plex']['token'] = 'KqHuz9kXEgYAuvyQpNrf'
-
-run_list 'recipe[fuse]', 'recipe[fuse::sshfs]', 'recipe[home_media_server::mount_atlantis]', 'recipe[home_media_server::sonarr]', 'recipe[home_media_server::plex_docker]'
+run_list 'recipe[fuse]', 'recipe[home_media_server::mount_atlantis]', 'recipe[home_media_server::sonarr]', 'recipe[home_media_server::plex_docker]'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'

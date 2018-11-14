@@ -4,6 +4,8 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
+package 'sshfs'
+
 # Mount atlantis here
 directory '/atlantis' do
   owner 'root'
