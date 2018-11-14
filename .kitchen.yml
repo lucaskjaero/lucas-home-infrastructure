@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     provisioner:
-      policyfile: policies/media_server/default.rb
+      policyfile: policies/linux_base/default.rb
     attributes:
       chef_client:
         conf_dir: "/etc/chef"

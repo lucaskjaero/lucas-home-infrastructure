@@ -18,7 +18,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[home_media_server::default]
+      - recipe[linux_base::default]
     verifier:
       inspec_tests:
         - test/integration/default
