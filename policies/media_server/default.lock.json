@@ -1,12 +1,12 @@
 {
-  "revision_id": "bc58e5e10b99671c0e06d10e9bc35e839e3d97e9733f8dc9e67420658df96a14",
+  "revision_id": "8a2dfe2f0047d72330a2f43d9ca7c05c2172542afcc71ebe24610cc7ed1bd50d",
   "name": "media_server",
   "run_list": [
-    "recipe[plex::default]",
     "recipe[fuse::default]",
     "recipe[fuse::sshfs]",
     "recipe[home_media_server::mount_atlantis]",
-    "recipe[home_media_server::sonarr]"
+    "recipe[home_media_server::sonarr]",
+    "recipe[home_media_server::plex_docker]"
   ],
   "included_policy_locks": [
 
@@ -47,19 +47,18 @@
     },
     "home_media_server": {
       "version": "0.1.0",
-      "identifier": "10f8538f81fff1eb59347006ee9be0dbeffb4461",
-      "dotted_decimal_identifier": "4776637401006065.66244701279678107.247235228681313",
+      "identifier": "181668653ed12c7dc48a0c6663b69dd38355b013",
+      "dotted_decimal_identifier": "6780037072081196.35400469281399734.173531767091219",
       "source": "../../cookbooks/home_media_server",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "006a50981d25482c9757102f6e597b56fa094a0c",
+        "revision": "c19a3bc513a70184eb16a298b5d3c415eb75d884",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -75,17 +74,6 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
         "version": "2.1.1"
-      }
-    },
-    "plex": {
-      "version": "0.2.3",
-      "identifier": "710c04741a87878b908b1d231350cbc3e6c9832d",
-      "dotted_decimal_identifier": "31819885635602311.39283948926473040.224042251027245",
-      "cache_key": "plex-0.2.3-supermarket.chef.io",
-      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/plex/versions/0.2.3/download",
-      "source_options": {
-        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/plex/versions/0.2.3/download",
-        "version": "0.2.3"
       }
     },
     "yum": {
@@ -132,10 +120,6 @@
         "= 2.1.1"
       ],
       [
-        "plex",
-        "= 0.2.3"
-      ],
-      [
         "yum",
         "= 5.1.0"
       ]
@@ -168,9 +152,6 @@
         ]
       ],
       "line (2.1.1)": [
-
-      ],
-      "plex (0.2.3)": [
 
       ],
       "yum (5.1.0)": [
