@@ -1,0 +1,94 @@
+{
+  "revision_id": "143a65ceef423d413fcc51f4723d15262ead35b847bef52dd1afccfc4439f84c",
+  "name": "media_server",
+  "run_list": [
+    "recipe[linux_base::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "linux_base": {
+      "version": "0.1.0",
+      "identifier": "cbeff95b1a7fe20aacefb2f5dd6d94a709e7f509",
+      "dotted_decimal_identifier": "57403274526621666.3004895266725229.163445146645769",
+      "source": "../../cookbooks/linux_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "e3dd8b1865eabb370897c0143ad4e0f0b9d486be",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/linux_base"
+      }
+    },
+    "ssh_authorized_keys": {
+      "version": "0.4.0",
+      "identifier": "37ef9028f0b5197c975f7701cb584f2a60c87e21",
+      "dotted_decimal_identifier": "15744526160278809.35069333386414936.87043430972961",
+      "cache_key": "ssh_authorized_keys-0.4.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+        "version": "0.4.0"
+      }
+    },
+    "sshd": {
+      "version": "2.0.0",
+      "identifier": "c2f3990aa25f60797a2d03eca5eb2ebf6dbbe1c4",
+      "dotted_decimal_identifier": "54873984115826528.34192805939946987.51399714660804",
+      "cache_key": "sshd-2.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+        "version": "2.0.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "linux_base",
+        ">= 0.0.0"
+      ],
+      [
+        "ssh_authorized_keys",
+        "= 0.4.0"
+      ],
+      [
+        "sshd",
+        "= 2.0.0"
+      ]
+    ],
+    "dependencies": {
+      "linux_base (0.1.0)": [
+        [
+          "ssh_authorized_keys",
+          ">= 0.0.0"
+        ],
+        [
+          "sshd",
+          ">= 0.0.0"
+        ]
+      ],
+      "ssh_authorized_keys (0.4.0)": [
+
+      ],
+      "sshd (2.0.0)": [
+
+      ]
+    }
+  }
+}
