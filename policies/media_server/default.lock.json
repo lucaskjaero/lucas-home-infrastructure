@@ -1,9 +1,9 @@
 {
-  "revision_id": "7ebc1fbecca1e7967bc2de25ebf10cf91f632863a4c7f6b97da5dc0fce06d379",
+  "revision_id": "9c4f2a259519eccffbb6a2ffbdd14c9cd75b7875fa522f1113f863213a6f0d49",
   "name": "media_server",
   "run_list": [
     "recipe[linux_base::default]",
-    "recipe[linux_base::docker]",
+    "recipe[docker_base::default]",
     "recipe[home_media_server::default]"
   ],
   "included_policy_locks": [
@@ -32,6 +32,27 @@
         "version": "4.6.7"
       }
     },
+    "docker_base": {
+      "version": "0.1.0",
+      "identifier": "d6c2dfee0ae94cf0a4857927bedccbab5fd5cf45",
+      "dotted_decimal_identifier": "60449912043268428.67734887580810972.223936907693893",
+      "source": "../../cookbooks/docker_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "1c56a2bb6c0ff1bf5ce93943979d04bafab8c509",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/docker_base"
+      }
+    },
     "fuse": {
       "version": "0.1.2",
       "identifier": "198b3fac1a1d7c4cbda3df537e89b5495ac9de32",
@@ -52,11 +73,12 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "009ae76217ed27e308bab3c89348ad6b3b447565",
+        "revision": "1c56a2bb6c0ff1bf5ce93943979d04bafab8c509",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/HEAD -> origin/master",
+          "origin/master"
         ]
       },
       "source_options": {
@@ -76,18 +98,19 @@
     },
     "linux_base": {
       "version": "0.1.0",
-      "identifier": "fdfd7394c5eb212572fc4261a9a43d9c8ed28aaa",
-      "dotted_decimal_identifier": "71491841966861089.10541001909316004.67742620355242",
+      "identifier": "1525297a5abf8582c710e63db0ab4484add1b552",
+      "dotted_decimal_identifier": "5951834587578245.36810622368592043.75336642573650",
       "source": "../../cookbooks/linux_base",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "009ae76217ed27e308bab3c89348ad6b3b447565",
+        "revision": "1c56a2bb6c0ff1bf5ce93943979d04bafab8c509",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/HEAD -> origin/master",
+          "origin/master"
         ]
       },
       "source_options": {
@@ -145,6 +168,10 @@
         "= 4.6.7"
       ],
       [
+        "docker_base",
+        ">= 0.0.0"
+      ],
+      [
         "fuse",
         "= 0.1.2"
       ],
@@ -180,6 +207,12 @@
       "docker (4.6.7)": [
 
       ],
+      "docker_base (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ]
+      ],
       "fuse (0.1.2)": [
         [
           "apt",
@@ -208,10 +241,6 @@
 
       ],
       "linux_base (0.1.0)": [
-        [
-          "docker",
-          ">= 0.0.0"
-        ],
         [
           "ssh_authorized_keys",
           ">= 0.0.0"

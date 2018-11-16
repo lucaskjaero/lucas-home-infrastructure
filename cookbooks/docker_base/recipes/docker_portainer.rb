@@ -1,6 +1,6 @@
 #
-# Cookbook:: linux_base
-# Recipe:: docker
+# Cookbook:: docker
+# Recipe:: docker_portainer
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
