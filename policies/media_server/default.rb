@@ -7,8 +7,9 @@
 name 'media_server'
 default_source :supermarket
 
-run_list 'recipe[home_media_server]'
+run_list 'recipe[linux_base]', 'recipe[linux_base::docker]', 'recipe[home_media_server]'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
+cookbook 'linux_base', path: '../../cookbooks/linux_base'
 cookbook 'home_media_server', path: '../../cookbooks/home_media_server'

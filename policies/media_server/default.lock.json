@@ -1,7 +1,9 @@
 {
-  "revision_id": "851ca7ea73ab52728757cce6e1e371a1b3d2bee53db13aba673374541275a316",
+  "revision_id": "08464e05ea9c9a4be999639cff77ac47082eb1b6bd2981147a1fdbb81a6a9297",
   "name": "media_server",
   "run_list": [
+    "recipe[linux_base::default]",
+    "recipe[linux_base::docker]",
     "recipe[home_media_server::default]"
   ],
   "included_policy_locks": [
@@ -50,7 +52,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "f623284e8d33994ba87cbcd1a7c53487c0481d52",
+        "revision": "5766a55ae7a7f94fb88b21a7db4fb22a03e2e9ac",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -71,6 +73,49 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/2.1.1/download",
         "version": "2.1.1"
+      }
+    },
+    "linux_base": {
+      "version": "0.1.0",
+      "identifier": "b5a64e006049cbfa0fe4b19be9bc07428668122d",
+      "dotted_decimal_identifier": "51129824728598987.70386219084409276.7982304203309",
+      "source": "../../cookbooks/linux_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "5766a55ae7a7f94fb88b21a7db4fb22a03e2e9ac",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/linux_base"
+      }
+    },
+    "ssh_authorized_keys": {
+      "version": "0.4.0",
+      "identifier": "37ef9028f0b5197c975f7701cb584f2a60c87e21",
+      "dotted_decimal_identifier": "15744526160278809.35069333386414936.87043430972961",
+      "cache_key": "ssh_authorized_keys-0.4.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+        "version": "0.4.0"
+      }
+    },
+    "sshd": {
+      "version": "2.0.0",
+      "identifier": "c2f3990aa25f60797a2d03eca5eb2ebf6dbbe1c4",
+      "dotted_decimal_identifier": "54873984115826528.34192805939946987.51399714660804",
+      "cache_key": "sshd-2.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+        "version": "2.0.0"
       }
     },
     "yum": {
@@ -114,6 +159,18 @@
         "= 2.1.1"
       ],
       [
+        "linux_base",
+        ">= 0.0.0"
+      ],
+      [
+        "ssh_authorized_keys",
+        "= 0.4.0"
+      ],
+      [
+        "sshd",
+        "= 2.0.0"
+      ],
+      [
         "yum",
         "= 5.1.0"
       ]
@@ -150,6 +207,26 @@
         ]
       ],
       "line (2.1.1)": [
+
+      ],
+      "linux_base (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ],
+        [
+          "ssh_authorized_keys",
+          ">= 0.0.0"
+        ],
+        [
+          "sshd",
+          ">= 0.0.0"
+        ]
+      ],
+      "ssh_authorized_keys (0.4.0)": [
+
+      ],
+      "sshd (2.0.0)": [
 
       ],
       "yum (5.1.0)": [
