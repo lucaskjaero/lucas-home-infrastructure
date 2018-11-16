@@ -1,5 +1,5 @@
 {
-  "revision_id": "08464e05ea9c9a4be999639cff77ac47082eb1b6bd2981147a1fdbb81a6a9297",
+  "revision_id": "7ebc1fbecca1e7967bc2de25ebf10cf91f632863a4c7f6b97da5dc0fce06d379",
   "name": "media_server",
   "run_list": [
     "recipe[linux_base::default]",
@@ -52,12 +52,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "5766a55ae7a7f94fb88b21a7db4fb22a03e2e9ac",
+        "revision": "009ae76217ed27e308bab3c89348ad6b3b447565",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
@@ -77,19 +76,18 @@
     },
     "linux_base": {
       "version": "0.1.0",
-      "identifier": "b5a64e006049cbfa0fe4b19be9bc07428668122d",
-      "dotted_decimal_identifier": "51129824728598987.70386219084409276.7982304203309",
+      "identifier": "fdfd7394c5eb212572fc4261a9a43d9c8ed28aaa",
+      "dotted_decimal_identifier": "71491841966861089.10541001909316004.67742620355242",
       "source": "../../cookbooks/linux_base",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "5766a55ae7a7f94fb88b21a7db4fb22a03e2e9ac",
+        "revision": "009ae76217ed27e308bab3c89348ad6b3b447565",
         "working_tree_clean": false,
-        "published": true,
+        "published": false,
         "synchronized_remote_branches": [
-          "origin/HEAD -> origin/master",
-          "origin/master"
+
         ]
       },
       "source_options": {
