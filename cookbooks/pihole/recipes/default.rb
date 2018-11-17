@@ -19,6 +19,6 @@ docker_container 'Pihole runtime' do
   env ["ServerIP=#{node['ipaddress']}", "ServerIPv6=#{node['ip6address']}", 'TZ="America/Los_Angeles"']
   cap_add 'NET_ADMIN'
   dns ['127.0.0.1', '1.1.1.1']
-  restart_polify 'unless-stopped'
+  restart_policy 'unless-stopped'
   action :run
 end

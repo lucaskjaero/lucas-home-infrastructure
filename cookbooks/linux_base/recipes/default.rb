@@ -13,4 +13,7 @@ apt_update 'daily apt update' do
 end
 
 # System monitoring
-package 'netdata'
+package 'netdata' do
+  action :install
+  ignore_failure true
+end
