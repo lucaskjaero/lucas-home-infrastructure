@@ -11,4 +11,4 @@ run_list 'recipe[linux_base]'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
-cookbook 'linux_base', path: '../../cookbooks/linux_base'
+cookbook 'linux_base', path: '../cookbooks/linux_base'
