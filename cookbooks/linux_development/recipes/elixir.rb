@@ -4,4 +4,6 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-include_recipe '::atom_base'
+atom_apm 'atom-elixir'
+atom_apm 'atom-elixir-formatter'
+atom_apm 'language-elixir'
