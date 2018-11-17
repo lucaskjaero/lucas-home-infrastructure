@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     provisioner:
-      policyfile: policies/linux_base/default.rb
+      policyfile: policies/pihole.rb
     attributes:
       chef_client:
         conf_dir: "/etc/chef"
