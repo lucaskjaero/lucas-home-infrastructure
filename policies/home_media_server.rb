@@ -1,7 +1,7 @@
 # Sets up a media server
 
 # A name that describes what the system you're building with Chef does.
-name 'media_server'
+name 'home_media_server'
 default_source :supermarket
 
 run_list 'recipe[linux_base]', 'recipe[docker_base]', 'recipe[home_media_server]'
