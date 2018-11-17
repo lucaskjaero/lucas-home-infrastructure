@@ -1,5 +1,5 @@
 {
-  "revision_id": "fa945db4257e3f44a566af690713f85f254325cc8263e3ce156dcc1350cbd9e0",
+  "revision_id": "7eac663b31462c36644037074361c803bc86dc55b1ae72c01a6cf71000a0bed6",
   "name": "pihole",
   "run_list": [
     "recipe[linux_base::default]",
@@ -22,8 +22,8 @@
     },
     "docker_base": {
       "version": "0.1.0",
-      "identifier": "d6c2dfee0ae94cf0a4857927bedccbab5fd5cf45",
-      "dotted_decimal_identifier": "60449912043268428.67734887580810972.223936907693893",
+      "identifier": "78cafef2073d3ab163fb4cf7a7b48e73be357f5e",
+      "dotted_decimal_identifier": "34000193536343354.49931001857025972.156627763560286",
       "source": "../cookbooks/docker_base",
       "cache_key": null,
       "scm_info": {
