@@ -5,15 +5,15 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # Set up ssh server
-include_recipe '::setup_ssh'
+include_recipe "::setup_ssh"
 
-apt_update 'daily apt update' do
+apt_update "daily apt update" do
   frequency 86400
   action :periodic
 end
 
 # System monitoring
-package 'netdata' do
+package "netdata" do
   action :install
   ignore_failure true
 end
