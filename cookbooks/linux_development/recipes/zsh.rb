@@ -1,8 +1,7 @@
 #
 # Cookbook:: linux_development
-# Recipe:: java
+# Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-package "openjdk-8-jdk"
-package "maven"
+package "fonts-powerline"
