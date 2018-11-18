@@ -1,10 +1,11 @@
-name 'linux_development'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'All Rights Reserved'
-description 'Installs/Configures linux_development'
-long_description 'Installs/Configures linux_development'
-version '0.1.0'
-chef_version '>= 13.0'
+name "linux_development"
+maintainer "The Authors"
+maintainer_email "you@example.com"
+license "All Rights Reserved"
+description "Installs/Configures linux_development"
+long_description "Installs/Configures linux_development"
+version "0.1.0"
+chef_version ">= 13.0"
 
-depends 'atom'
+depends "atom"
+depends "elixir"
