@@ -1,8 +1,8 @@
 #
 # Cookbook:: linux_development
-# Recipe:: chef
+# Recipe:: java
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-package "vagrant"
-package "virtualbox"
+package "openjdk-8-jdk"
+package "maven"

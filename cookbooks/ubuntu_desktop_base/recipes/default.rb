@@ -6,3 +6,5 @@
 
 # Play video and audio files
 package "ubuntu-restricted-extras"
+
+package "deluge"
