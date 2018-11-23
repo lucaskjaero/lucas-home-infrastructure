@@ -1,6 +1,6 @@
 #
 # Cookbook:: file_sync
-# Recipe:: default
+# Recipe:: file_sharing
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
