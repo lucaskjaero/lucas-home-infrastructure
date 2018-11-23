@@ -1,5 +1,5 @@
 {
-  "revision_id": "e6f922b52a7feda9f753143845d30d7335f1f25c15a1a14e3b143f6c37f5cbdf",
+  "revision_id": "5bc37b391044e8fa69af22c93d841fab6aed6fb7a354015f28bf57c1e33acb53",
   "name": "lacabana",
   "run_list": [
     "recipe[linux_base::default]",
@@ -31,7 +31,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
+        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -45,14 +45,14 @@
     },
     "file_sync": {
       "version": "0.1.0",
-      "identifier": "7cdb10f7ddd292cf31024cd2789d0501757ff7c9",
-      "dotted_decimal_identifier": "35143763036590738.58319206127663261.5503824426953",
+      "identifier": "aad278f2259e45b5479f2290da49c973156f18c5",
+      "dotted_decimal_identifier": "48082162941271621.51025719589919305.221496118024389",
       "source": "../cookbooks/file_sync",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
+        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -66,14 +66,14 @@
     },
     "linux_base": {
       "version": "0.1.0",
-      "identifier": "01bf2659132f30352e6c50c272273964f97280ac",
-      "dotted_decimal_identifier": "491646400802608.14969216511930919.63105844543660",
+      "identifier": "c46fca096f9673272bdb8f306bbf51abe9a84da5",
+      "dotted_decimal_identifier": "55292008967673459.11025746091862975.89798801378725",
       "source": "../cookbooks/linux_base",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
+        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -127,7 +127,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
+        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -202,6 +202,10 @@
         ]
       ],
       "linux_base (0.1.0)": [
+        [
+          "samba",
+          ">= 0.0.0"
+        ],
         [
           "ssh_authorized_keys",
           ">= 0.0.0"

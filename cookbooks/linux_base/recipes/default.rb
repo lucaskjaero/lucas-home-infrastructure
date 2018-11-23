@@ -19,4 +19,4 @@ package "netdata" do
 end
 
 # Access file shares from other servers
-include_recipe "samba"
+include_recipe "samba::client"
