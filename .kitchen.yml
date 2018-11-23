@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     provisioner:
-      policyfile: policies/pihole.rb
+      policyfile: policies/lacabana.rb
     attributes:
       chef_client:
         conf_dir: "/etc/chef"

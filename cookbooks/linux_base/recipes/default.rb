@@ -17,3 +17,6 @@ package "netdata" do
   action :install
   ignore_failure true
 end
+
+# Access file shares from other servers
+include_recipe "samba"

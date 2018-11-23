@@ -19,3 +19,4 @@ chef_version '>= 13.0'
 #
 # source_url 'https://github.com/<insert_org_here>/file_sync'
 depends 'docker_base'
+depends 'samba'

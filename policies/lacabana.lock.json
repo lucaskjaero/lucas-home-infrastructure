@@ -1,10 +1,11 @@
 {
-  "revision_id": "a9e96dda8f3c44f3dab0deaf150ee8734aa78d9496c038670e7302cef329cb70",
+  "revision_id": "e6f922b52a7feda9f753143845d30d7335f1f25c15a1a14e3b143f6c37f5cbdf",
   "name": "lacabana",
   "run_list": [
     "recipe[linux_base::default]",
     "recipe[ubuntu_desktop_base::default]",
-    "recipe[file_sync::default]"
+    "recipe[file_sync::default]",
+    "recipe[file_sync::file_sharing]"
   ],
   "included_policy_locks": [
 
@@ -30,7 +31,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "1108384ca49b95dd5b1ef975d07cb18e6980b080",
+        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -44,14 +45,14 @@
     },
     "file_sync": {
       "version": "0.1.0",
-      "identifier": "d00369132c932a23e5b55a4eecb52c97da055748",
-      "dotted_decimal_identifier": "58550544983954218.10104191251836085.49030709466952",
+      "identifier": "7cdb10f7ddd292cf31024cd2789d0501757ff7c9",
+      "dotted_decimal_identifier": "35143763036590738.58319206127663261.5503824426953",
       "source": "../cookbooks/file_sync",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "1108384ca49b95dd5b1ef975d07cb18e6980b080",
+        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -72,7 +73,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "1108384ca49b95dd5b1ef975d07cb18e6980b080",
+        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -82,6 +83,17 @@
       },
       "source_options": {
         "path": "../cookbooks/linux_base"
+      }
+    },
+    "samba": {
+      "version": "1.2.0",
+      "identifier": "957c50314939012da3e69539fe9d00a6ef0cc0cf",
+      "dotted_decimal_identifier": "42076455395997953.12846584693391005.716975161551",
+      "cache_key": "samba-1.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/1.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/1.2.0/download",
+        "version": "1.2.0"
       }
     },
     "ssh_authorized_keys": {
@@ -115,7 +127,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "1108384ca49b95dd5b1ef975d07cb18e6980b080",
+        "revision": "b2667975659dc0beac956e1ca1592660cc7a0c21",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -153,6 +165,10 @@
         ">= 0.0.0"
       ],
       [
+        "samba",
+        "= 1.2.0"
+      ],
+      [
         "ssh_authorized_keys",
         "= 0.4.0"
       ],
@@ -179,6 +195,10 @@
         [
           "docker_base",
           ">= 0.0.0"
+        ],
+        [
+          "samba",
+          ">= 0.0.0"
         ]
       ],
       "linux_base (0.1.0)": [
@@ -190,6 +210,9 @@
           "sshd",
           ">= 0.0.0"
         ]
+      ],
+      "samba (1.2.0)": [
+
       ],
       "ssh_authorized_keys (0.4.0)": [
 
