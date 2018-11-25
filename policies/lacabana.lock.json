@@ -1,5 +1,5 @@
 {
-  "revision_id": "5bc37b391044e8fa69af22c93d841fab6aed6fb7a354015f28bf57c1e33acb53",
+  "revision_id": "c1f17db215ec293c6148139d60b4270810d4c5fcc3a8a467bf0d4c43cfdfd699",
   "name": "lacabana",
   "run_list": [
     "recipe[linux_base::default]",
@@ -31,7 +31,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
+        "revision": "6522a070c2d6b41924c3da746ed2ec943e8f7f6e",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -52,7 +52,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
+        "revision": "6522a070c2d6b41924c3da746ed2ec943e8f7f6e",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -66,14 +66,14 @@
     },
     "linux_base": {
       "version": "0.1.0",
-      "identifier": "c46fca096f9673272bdb8f306bbf51abe9a84da5",
-      "dotted_decimal_identifier": "55292008967673459.11025746091862975.89798801378725",
+      "identifier": "92a52265b4eae3478061a951ae695db3f733c7c8",
+      "dotted_decimal_identifier": "41276913753582307.20125880287342185.103027527894984",
       "source": "../cookbooks/linux_base",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
+        "revision": "6522a070c2d6b41924c3da746ed2ec943e8f7f6e",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -127,7 +127,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "aceb6c3f87cd1560c36e8b2dbdf767e6a790db55",
+        "revision": "6522a070c2d6b41924c3da746ed2ec943e8f7f6e",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [

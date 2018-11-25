@@ -20,3 +20,6 @@ end
 
 # Access file shares from other servers
 include_recipe "samba::client"
+
+# Allow remote desktop viewing of this machine
+include_recipe "::setup_vnc"
