@@ -1,5 +1,5 @@
 {
-  "revision_id": "e4406b0e62eb483dad15c2bdd419b5fb6ff4a7f569fe301e3c3944e5fd48c514",
+  "revision_id": "32df2b3aff8d4864c78d26d520bd3b979a5e7e800fcc1758503285e4164201a5",
   "name": "thelio",
   "run_list": [
     "recipe[linux_base::default]",
@@ -42,8 +42,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "6396fc33ddceaecdd5df4c28a577080ede437b01",
-        "working_tree_clean": true,
+        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/HEAD -> origin/master",
@@ -67,15 +67,15 @@
     },
     "home_media_server": {
       "version": "0.1.0",
-      "identifier": "f4fbedbb03f2fd9c6e8b86fe04386a8f9c27373a",
-      "dotted_decimal_identifier": "68956892780819197.44031641911166008.117165032683322",
+      "identifier": "930af12d78cbd34506df004209b56483fb527b64",
+      "dotted_decimal_identifier": "41388852542753747.19429328244836789.110518019980132",
       "source": "../cookbooks/home_media_server",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "6396fc33ddceaecdd5df4c28a577080ede437b01",
-        "working_tree_clean": true,
+        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/HEAD -> origin/master",
@@ -106,8 +106,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "6396fc33ddceaecdd5df4c28a577080ede437b01",
-        "working_tree_clean": true,
+        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/HEAD -> origin/master",
