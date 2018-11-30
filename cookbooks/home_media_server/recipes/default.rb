@@ -25,3 +25,4 @@ end
 
 include_recipe "::mount_atlantis"
 include_recipe "::plex_docker"
+include_recipe "::jackett"
