@@ -4,7 +4,7 @@
 name "thelio"
 default_source :supermarket
 
-run_list "recipe[linux_base]", "recipe[docker_base]", "recipe[home_media_server]", "recipe[home_media_server::sonarr]", "recipe[home_media_server::radarr]", "recipe[home_media_server::lidarr]"
+run_list "recipe[linux_base]", "recipe[docker_base]", "recipe[home_media_server]", "recipe[home_media_server::sonarr]", "recipe[home_media_server::radarr]"
 
 # Specify a custom source for a single cookbook:
 # cookbook "example_cookbook", path: "../cookbooks/example_cookbook"
