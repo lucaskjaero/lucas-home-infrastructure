@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     provisioner:
-      policyfile: policies/lacabana.rb
+      policyfile: policies/thelio.rb
     attributes:
       chef_client:
         conf_dir: "/etc/chef"

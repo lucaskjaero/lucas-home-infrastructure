@@ -6,6 +6,7 @@
 
 user "sonarr" do
   shell "/sbin/nologin"
+  uid 8989
   comment "Service user for sonarr"
   system true
   manage_home false
@@ -13,8 +14,8 @@ end
 
 directory "/config/sonarr" do
   owner "sonarr"
-  group "sonarr"
-  mode "0777"
+  group "media_server"
+  mode "0775"
   action :create
   not_if { Dir.exist? "/config/sonarr" }
 end
@@ -29,6 +30,6 @@ docker_container "Sonarr container" do
   repo "linuxserver/sonarr"
   port "8989:8989"
   volumes ["/config/sonarr:/config", "/video:/tv", "/atlantis:/downloads:ro"]
-  env ['TZ="America/Los_Angeles"']
+  env ['TZ="America/Los_Angeles"', "PUID=8989", "PGID=8888"]
   action :run
 end
