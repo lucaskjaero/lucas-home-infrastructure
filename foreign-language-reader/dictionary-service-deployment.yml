@@ -14,6 +14,17 @@ spec:
     spec:
       containers:
       - name: dictionary-service
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: "/apikeys/foreign-language-api-google-key.json"
         image: gcr.io/foreign-language-reader/dictionary-service:1.02
         ports:
         - containerPort: 8000
+        volumeMounts:
+        - name: apikeys
+          mountPath: "/apikeys"
+          readOnly: true
+      volumes:
+        - name: apikeys
+          secret:
+            secretName: language-api-keys	
