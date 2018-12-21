@@ -16,5 +16,5 @@ spec:
           servicePort: 8000
       - path: /stemming/*
         backend:
-          serviceName: stemming-service
+          serviceName: dictionary-service
           servicePort: 8000
