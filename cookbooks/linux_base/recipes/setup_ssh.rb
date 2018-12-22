@@ -17,7 +17,7 @@ user "lucas" do
   home "/home/lucas"
   shell "/bin/bash"
   password "$1$bZBO16pg$AO8Ycsf3Jq4q5rBYsqRJE0"
-  not_if "id -u somename"
+  not_if "id -u lucas"
 end
 
 # Authorize my laptop key to log in to all boxes
