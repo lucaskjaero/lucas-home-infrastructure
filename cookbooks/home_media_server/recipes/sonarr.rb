@@ -29,7 +29,7 @@ docker_container "Sonarr container" do
   container_name "sonarr"
   repo "linuxserver/sonarr"
   port "8989:8989"
-  volumes ["/config/sonarr:/config", "/video:/tv", "/atlantis:/downloads:ro"]
+  volumes ["/config/sonarr:/config", "/video:/tv", "/seedbox:/downloads:ro"]
   env ['TZ="America/Los_Angeles"', "PUID=8989", "PGID=8888"]
   action :run
 end

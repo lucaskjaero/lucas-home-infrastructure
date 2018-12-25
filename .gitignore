@@ -25,4 +25,3 @@ Policyfile.lock.json
 
 # Private keys
 .chef/*.pem
-cookbooks/home_media_server/files/default/privatekey

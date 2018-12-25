@@ -29,7 +29,7 @@ docker_container "Radarr container" do
   container_name "radarr"
   repo "linuxserver/radarr"
   port "7878:7878"
-  volumes ["/config/radarr:/config", "/video/movies:/movies", "/atlantis:/downloads:ro"]
+  volumes ["/config/radarr:/config", "/video/movies:/movies", "/seedbox:/downloads:ro"]
   env ['TZ="America/Los_Angeles"', "PUID=7878", "PGID=8888"]
   action :run
 end

@@ -29,7 +29,7 @@ docker_container "Lidarr container" do
   container_name "lidarr"
   repo "linuxserver/lidarr"
   port "8686:8686"
-  volumes ["/config/lidarr:/config", "/music:/music", "/atlantis:/downloads:ro"]
+  volumes ["/config/lidarr:/config", "/music:/music", "/seedbox:/downloads:ro"]
   env ['TZ="America/Los_Angeles"', "PUID=8686", "PGID=8888"]
   action :run
 end

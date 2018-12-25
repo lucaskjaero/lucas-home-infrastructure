@@ -23,6 +23,6 @@ directory "/video" do
   not_if { Dir.exist? "/video" }
 end
 
-include_recipe "::mount_atlantis"
+include_recipe "::mount_seedbox"
 include_recipe "::plex_docker"
 include_recipe "::jackett"
