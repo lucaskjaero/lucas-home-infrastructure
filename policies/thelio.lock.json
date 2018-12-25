@@ -1,11 +1,12 @@
 {
-  "revision_id": "32df2b3aff8d4864c78d26d520bd3b979a5e7e800fcc1758503285e4164201a5",
+  "revision_id": "902131ecc54827dced2124e54e8eefcd350080a51624b008c4112d02a54f2377",
   "name": "thelio",
   "run_list": [
     "recipe[linux_base::default]",
     "recipe[docker_base::default]",
     "recipe[home_media_server::default]",
-    "recipe[home_media_server::sonarr]"
+    "recipe[home_media_server::sonarr]",
+    "recipe[home_media_server::radarr]"
   ],
   "included_policy_locks": [
 
@@ -23,14 +24,14 @@
       }
     },
     "docker": {
-      "version": "4.6.8",
-      "identifier": "cf5b4ba99eb2b23bf1a816af1c82e65b4d97cda4",
-      "dotted_decimal_identifier": "58365700705530546.16872727863303298.253279818206628",
-      "cache_key": "docker-4.6.8-supermarket.chef.io",
-      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.8/download",
+      "version": "4.9.0",
+      "identifier": "282e21fbeabb1e9cf011b8e3f98fa4e8730c95a6",
+      "dotted_decimal_identifier": "11309722563689246.44174055273920911.181318269572518",
+      "cache_key": "docker-4.9.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.0/download",
       "source_options": {
-        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.6.8/download",
-        "version": "4.6.8"
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.0/download",
+        "version": "4.9.0"
       }
     },
     "docker_base": {
@@ -41,8 +42,8 @@
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "remote": null,
+        "revision": "66b0e8bbeaae889175046b600e93158ec21debb6",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -67,14 +68,14 @@
     },
     "home_media_server": {
       "version": "0.1.0",
-      "identifier": "930af12d78cbd34506df004209b56483fb527b64",
-      "dotted_decimal_identifier": "41388852542753747.19429328244836789.110518019980132",
+      "identifier": "f7c1d7cddf394a6ab0e993167dcdbd036abc907c",
+      "dotted_decimal_identifier": "69737451863619914.30030864772922829.207822373294204",
       "source": "../cookbooks/home_media_server",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "remote": null,
+        "revision": "66b0e8bbeaae889175046b600e93158ec21debb6",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -105,8 +106,8 @@
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
-        "revision": "842d30f933e4103f942fcb2220a8f84de40e2b65",
+        "remote": null,
+        "revision": "66b0e8bbeaae889175046b600e93158ec21debb6",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -177,7 +178,7 @@
       ],
       [
         "docker",
-        "= 4.6.8"
+        "= 4.9.0"
       ],
       [
         "docker_base",
@@ -220,7 +221,7 @@
       "apt (7.1.1)": [
 
       ],
-      "docker (4.6.8)": [
+      "docker (4.9.0)": [
 
       ],
       "docker_base (0.1.0)": [
