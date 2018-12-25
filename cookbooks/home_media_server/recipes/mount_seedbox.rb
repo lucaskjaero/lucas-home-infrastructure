@@ -61,7 +61,7 @@ end
 # Add to fstab for automatic mounting, and then kick it off
 append_if_no_line "Add to fstab" do
   path "/etc/fstab"
-  line "sshfs#sanjid@seedbox.whatbox.ca:/home/sanjid/files /seedbox fuse IdentityFile=/config/seedbox/.ssh/id_rsa,allow_other,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3, 0 0"
+  line "sshfs#sanjid@euclid.whatbox.ca:/home/sanjid/files /seedbox fuse IdentityFile=/config/seedbox/.ssh/id_rsa,allow_other,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3, 0 0"
 end
 bash "Mount seedbox" do
   user "root"
