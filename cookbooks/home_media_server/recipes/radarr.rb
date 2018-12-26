@@ -4,6 +4,10 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
+radarr_config_dir = "#{node["home_media_server"]["config_dir"]}/radarr"
+download_dir = node["home_media_server"]["download_dir"]
+media_dir = node["home_media_server"]["media_dir"]
+
 user "radarr" do
   shell "/sbin/nologin"
   uid 7878
@@ -12,12 +16,12 @@ user "radarr" do
   manage_home false
 end
 
-directory "/config/radarr" do
+directory radarr_config_dir do
   owner "radarr"
   group "media_server"
   mode "0775"
   action :create
-  not_if { Dir.exist? "/config/radarr" }
+  not_if { Dir.exist? radarr_config_dir }
 end
 
 docker_image "Radarr image" do
@@ -29,7 +33,7 @@ docker_container "Radarr container" do
   container_name "radarr"
   repo "linuxserver/radarr"
   port "7878:7878"
-  volumes ["/config/radarr:/config", "/video:/movies", "/seedbox:/downloads:ro"]
-  env ['TZ="America/Los_Angeles"', "PUID=7878", "PGID=8888"]
+  volumes ["#{radarr_config_dir}:/config", "#{media_dir}:/movies", "#{download_dir}:/downloads:ro"]
+  env [node["home_media_server"]["timezone"], "PUID=7878", "PGID=8888"]
   action :run
 end

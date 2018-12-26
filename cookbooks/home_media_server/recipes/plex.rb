@@ -4,6 +4,9 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
+plex_config_dir = "#{node["home_media_server"]["config_dir"]}/plex"
+media_dir = node["home_media_server"]["media_dir"]
+
 user "plex" do
   shell "/sbin/nologin"
   comment "Service user for plex"
@@ -11,12 +14,12 @@ user "plex" do
   manage_home false
 end
 
-directory "/config/plex" do
+directory plex_config_dir do
   owner "plex"
   group "plex"
   mode "0777"
   action :create
-  not_if { Dir.exist? "/config/plex" }
+  not_if { Dir.exist? plex_config_dir }
 end
 directory "/transcode" do
   owner "plex"
@@ -37,7 +40,7 @@ docker_container "Plex container" do
   repo "plexinc/pms-docker"
   tag "plexpass"
   network_mode "host"
-  volumes ["/config/plex:/config", "/transcode:/transcode", "/video:/data"]
+  volumes ["#{plex_config_dir}:/config", "/transcode:/transcode", "#{media_dir}:/data"]
   env ['TZ="America/Los_Angeles"']
   action :run
 end

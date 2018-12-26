@@ -4,6 +4,10 @@
 #
 # Copyright:: 2018, Lucas Kjaero, All Rights Reserved.
 
+sonarr_config_dir = "#{node["home_media_server"]["config_dir"]}/sonarr"
+download_dir = node["home_media_server"]["download_dir"]
+media_dir = node["home_media_server"]["media_dir"]
+
 user "sonarr" do
   shell "/sbin/nologin"
   uid 8989
@@ -12,12 +16,12 @@ user "sonarr" do
   manage_home false
 end
 
-directory "/config/sonarr" do
+directory sonarr_config_dir do
   owner "sonarr"
   group "media_server"
   mode "0775"
   action :create
-  not_if { Dir.exist? "/config/sonarr" }
+  not_if { Dir.exist? sonarr_config_dir }
 end
 
 docker_image "Sonarr image" do
@@ -29,7 +33,7 @@ docker_container "Sonarr container" do
   container_name "sonarr"
   repo "linuxserver/sonarr"
   port "8989:8989"
-  volumes ["/config/sonarr:/config", "/video:/tv", "/seedbox:/downloads:ro"]
-  env ['TZ="America/Los_Angeles"', "PUID=8989", "PGID=8888"]
+  volumes ["#{sonarr_config_dir}:/config", "#{media_dir}:/tv", "#{download_dir}:/downloads:ro"]
+  env [node["home_media_server"]["timezone"], "PUID=8989", "PGID=8888"]
   action :run
 end
