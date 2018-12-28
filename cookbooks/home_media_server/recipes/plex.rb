@@ -7,6 +7,9 @@
 plex_config_dir = "#{node["home_media_server"]["config_dir"]}/plex"
 media_dir = node["home_media_server"]["media_dir"]
 
+package "ubuntu-restricted-extras"
+package "vlc"
+
 user "plex" do
   shell "/sbin/nologin"
   comment "Service user for plex"
