@@ -6,11 +6,9 @@
 name "lacabana"
 default_source :supermarket
 
-run_list "recipe[linux_base]", "recipe[ubuntu_desktop_base]", "recipe[file_sync]", "recipe[file_sync::file_sharing]", "recipe[home_media_server]", "recipe[home_media_server::lidarr]"
+run_list "recipe[linux_base]", "recipe[ubuntu_desktop_base]", "recipe[file_sync]", "recipe[file_sync::file_sharing]"
 
-# Specify a custom source for a single cookbook:
-# cookbook "example_cookbook", path: "../cookbooks/example_cookbook"
-cookbook "linux_base", path: "../cookbooks/linux_base"
-cookbook "docker_base", path: "../cookbooks/docker_base"
-cookbook "file_sync", path: "../cookbooks/file_sync"
-cookbook "ubuntu_desktop_base", path: "../cookbooks/ubuntu_desktop_base"
+cookbook "linux_base", path: "../../cookbooks/linux_base"
+cookbook "docker_base", path: "../../cookbooks/docker_base"
+cookbook "file_sync", path: "../../cookbooks/file_sync"
+cookbook "ubuntu_desktop_base", path: "../../cookbooks/ubuntu_desktop_base"
