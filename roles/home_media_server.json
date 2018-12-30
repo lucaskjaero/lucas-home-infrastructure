@@ -1,0 +1,38 @@
+{
+  "name": "home_media_server",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "home_media_server": {
+      "config_dir": "/config",
+      "download_dir": "/seedbox",
+      "media_dir": "/video",
+      "timezone": "TZ=\"America/Los_Angeles\"",
+      "jackett": {
+        "enabled": true
+      },
+      "lidarr": {
+        "enabled": true
+      },
+      "radarr": {
+        "enabled": true
+      },
+      "sonarr": {
+        "enabled": true
+      },
+      "seedbox": {
+        "enabled": true,
+        "remote_host": "euclid.whatbox.ca",
+        "remote_path": "/home/sanjid/files",
+        "remote_username": "sanjid"
+      }
+    }
+  },
+  "description": "A media server running plex",
+  "run_list": [
+    "role[ubuntu_node]",
+    "role[docker_host]",
+    "recipe[home_media_server]"
+  ],
+  "override_attributes": {}
+}
