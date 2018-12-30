@@ -1,0 +1,19 @@
+{
+  "name": "file_sync",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "file_sync": {
+      "config_dir": "/config",
+      "timezone": "TZ=\"America/Los_Angeles\""
+    }
+  },
+  "description": "A node syncing files with syncthing",
+  "run_list": [
+    "role[ubuntu_node]",
+    "role[docker_host]",
+    "recipe[file_sync]",
+    "recipe[file_sync::file_sharing]"
+  ],
+  "override_attributes": {}
+}
