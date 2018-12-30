@@ -1,0 +1,12 @@
+{
+  "name": "linux_node",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The base role for all linux nodes",
+  "run_list": [
+    "recipe[chef-client]",
+    "recipe[linux_base]"
+  ],
+  "override_attributes": {}
+}

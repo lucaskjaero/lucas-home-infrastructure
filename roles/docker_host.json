@@ -1,0 +1,11 @@
+{
+  "name": "docker_host",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "Setup for docker installations on all nodes",
+  "run_list": [
+    "recipe[docker_base]"
+  ],
+  "override_attributes": {}
+}

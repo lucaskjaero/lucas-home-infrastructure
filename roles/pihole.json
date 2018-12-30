@@ -1,0 +1,13 @@
+{
+  "name": "pihole",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "A dns server running pihole",
+  "run_list": [
+    "role[linux_node]",
+    "role[docker_host]",
+    "recipe[pihole]"
+  ],
+  "override_attributes": {}
+}

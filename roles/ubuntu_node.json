@@ -1,0 +1,12 @@
+{
+  "name": "ubuntu_node",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The base role for all ubuntu nodes",
+  "run_list": [
+    "role[linux_node]",
+    "recipe[ubuntu_desktop_base]"
+  ],
+  "override_attributes": {}
+}

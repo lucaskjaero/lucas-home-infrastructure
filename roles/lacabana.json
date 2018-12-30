@@ -1,0 +1,13 @@
+{
+  "name": "lacabana",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The base role for systems that serve HTTP traffic",
+  "run_list": [
+    "role[ubuntu_node]",
+    "recipe[file_sync]",
+    "recipe[file_sync::file_sharing]"
+  ],
+  "override_attributes": {}
+}
