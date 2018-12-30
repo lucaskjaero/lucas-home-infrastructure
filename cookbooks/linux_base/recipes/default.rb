@@ -18,6 +18,9 @@ package "netdata" do
   ignore_failure true
 end
 
+# ifconfig, probably others
+package "net-tools"
+
 # Access file shares from other servers
 include_recipe "samba::client"
 
