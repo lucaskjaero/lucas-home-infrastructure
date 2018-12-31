@@ -35,5 +35,6 @@ docker_container "Radarr container" do
   port "7878:7878"
   volumes ["#{radarr_config_dir}:/config", "#{media_dir}:/movies", "#{download_dir}:/downloads:ro"]
   env [node["home_media_server"]["timezone"], "PUID=7878", "PGID=8888"]
+  restart_policy "unless-stopped"
   action :run
 end

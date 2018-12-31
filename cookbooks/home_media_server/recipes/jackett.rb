@@ -33,5 +33,6 @@ docker_container "Jackett container" do
   port "9117:9117"
   volumes ["#{jackett_config_dir}:/config"]
   env [node["home_media_server"]["timezone"], "PUID=9117", "PGID=8888"]
+  restart_policy "unless-stopped"
   action :run
 end

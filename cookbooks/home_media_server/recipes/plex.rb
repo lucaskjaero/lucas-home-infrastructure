@@ -45,5 +45,6 @@ docker_container "Plex container" do
   network_mode "host"
   volumes ["#{plex_config_dir}:/config", "/transcode:/transcode", "#{media_dir}:/data"]
   env ['TZ="America/Los_Angeles"']
+  restart_policy "unless-stopped"
   action :run
 end

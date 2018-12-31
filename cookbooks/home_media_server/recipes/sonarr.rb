@@ -35,5 +35,6 @@ docker_container "Sonarr container" do
   port "8989:8989"
   volumes ["#{sonarr_config_dir}:/config", "#{media_dir}:/tv", "#{download_dir}:/downloads:ro"]
   env [node["home_media_server"]["timezone"], "PUID=8989", "PGID=8888"]
+  restart_policy "unless-stopped"
   action :run
 end

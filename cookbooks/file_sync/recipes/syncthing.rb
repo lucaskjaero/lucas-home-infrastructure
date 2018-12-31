@@ -26,22 +26,22 @@ directory "/config/syncthing" do
   action :create
   not_if { Dir.exist? "/config/syncthing" }
 end
-directory "/files" do
-  owner "lucas"
-  mode "0755"
-  action :create
-  not_if { Dir.exist? "/files" }
-end
 
 docker_image "Syncthing image" do
   repo "linuxserver/syncthing"
   action :pull
 end
 
+# Mount some default folders and then allow the user to add more
+# TODO need unique mount so we don't clobber each node's data
+default_mounts = ["/config/syncthing:/config", "/config:/mnt/config"]
+user_passed_folders = node["file_sync"]["syncthing"]["synced_folders"]
+syncthing_volumes = (default_mounts + user_passed_folders).uniq
+
 docker_container "Syncthing runtime" do
   container_name "syncthing"
   repo "linuxserver/syncthing"
   port ["8384:8384", "22000:22000", "21027:21027/udp"]
-  volumes ["/config/syncthing:/config", "/files:/mnt/files"]
+  volumes syncthing_volumes
   action :run
 end

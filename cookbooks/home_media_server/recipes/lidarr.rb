@@ -35,5 +35,6 @@ docker_container "Lidarr container" do
   port "8686:8686"
   volumes ["#{lidarr_config_dir}:/config", "#{media_dir}:/music", "#{download_dir}:/downloads:ro"]
   env [node["home_media_server"]["timezone"], "PUID=8686", "PGID=8888"]
+  restart_policy "unless-stopped"
   action :run
 end
