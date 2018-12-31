@@ -8,6 +8,9 @@
       "download_dir": "/seedbox",
       "media_dir": "/video",
       "timezone": "TZ=\"America/Los_Angeles\"",
+      "bazarr": {
+        "enabled": true
+      },
       "jackett": {
         "enabled": true
       },
