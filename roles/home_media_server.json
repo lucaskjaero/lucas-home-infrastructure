@@ -12,6 +12,7 @@
         "enabled": true
       },
       "jackett": {
+        "download_dir": "/video/media1/downloads",
         "enabled": true
       },
       "lidarr": {
