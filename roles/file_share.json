@@ -1,0 +1,12 @@
+{
+  "name": "file_share",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "A node sharing files over samba",
+  "run_list": [
+    "recipe[samba::server]",
+    "recipe[file_share]"
+  ],
+  "override_attributes": {}
+}

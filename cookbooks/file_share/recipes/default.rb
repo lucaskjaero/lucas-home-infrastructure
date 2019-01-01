@@ -4,8 +4,6 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-include_recipe "samba::server"
-
 files = node["file_share"]["share_directories"]
 
 files.each do |file|
