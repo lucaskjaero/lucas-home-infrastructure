@@ -33,7 +33,7 @@ docker_container "Bazarr container" do
   repo "linuxserver/bazarr"
   port "6767:6767"
   volumes ["#{bazarr_config_dir}:/config", "#{media_dir}:/movies", "#{media_dir}:/tv"]
-  env [node["home_media_server"]["timezone"], "PUID=bazarr", "PGID=8888"]
+  env [node["home_media_server"]["timezone"], "PUID=6767", "PGID=8888"]
   restart_policy "unless-stopped"
   action :run
 end
