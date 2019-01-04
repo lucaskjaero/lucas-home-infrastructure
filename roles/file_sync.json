@@ -12,8 +12,7 @@
   "run_list": [
     "role[ubuntu_node]",
     "role[docker_host]",
-    "recipe[file_sync]",
-    "recipe[file_sync::file_sharing]"
+    "recipe[file_sync]"
   ],
   "override_attributes": {}
 }
