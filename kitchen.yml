@@ -13,8 +13,12 @@ platforms:
 
 suites:
   - name: default
-    provisioner:
-      policyfile: policies/thelio/Policyfile.rb
+    run_list:
+      - recipe[file_share]
     attributes:
       chef_client:
         conf_dir: "/etc/chef"
+      file_share:
+        share_directories:
+          - "dir1"
+          - "dir2"

@@ -1,0 +1,14 @@
+{
+  "name": "gazelle",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The base role for systems that serve HTTP traffic",
+  "run_list": [
+    "recipe[gazelle]",
+    "role[ubuntu_node]",
+    "role[docker_host]",
+    "recipe[file_sync]"
+  ],
+  "override_attributes": {}
+}
