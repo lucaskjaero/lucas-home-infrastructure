@@ -41,7 +41,6 @@ docker_image "Syncthing image" do
 end
 
 # Mount some default folders and then allow the user to add more
-# TODO need unique mount so we don't clobber each node's data
 default_mounts = ["/config/syncthing/#{node.name}:/config", "/config:/mnt/config/"]
 user_passed_folders = node["sync"]["sync_directories"]
 syncthing_volumes = (default_mounts + user_passed_folders).uniq
@@ -49,7 +48,7 @@ syncthing_volumes = (default_mounts + user_passed_folders).uniq
 docker_container "Syncthing runtime" do
   container_name "syncthing"
   repo "linuxserver/syncthing"
-  env ['TZ="America/Los_Angeles"', "PUID=8384"]
+  env ['TZ="America/Los_Angeles"', "PUID=8384", "PGID=9999"]
   network_mode "host"
   volumes syncthing_volumes
   action :run
