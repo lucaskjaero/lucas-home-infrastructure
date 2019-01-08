@@ -1,9 +1,9 @@
-name 'file_share'
+name 'backup'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
-description 'Sets up a samba share'
-long_description 'Sets up a samba share'
+description 'Sets up file backup with duplicati'
+long_description 'Sets up file backup with duplicati'
 version '0.1.0'
 chef_version '>= 13.0'
 
@@ -18,4 +18,4 @@ chef_version '>= 13.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/file_sync'
-depends 'samba'
+depends 'docker_base'

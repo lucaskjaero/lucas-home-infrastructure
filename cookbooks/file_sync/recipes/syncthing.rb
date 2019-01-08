@@ -48,7 +48,7 @@ syncthing_volumes = (default_mounts + user_passed_folders).uniq
 docker_container "Syncthing runtime" do
   container_name "syncthing"
   repo "linuxserver/syncthing"
-  env ['TZ="America/Los_Angeles"', "PUID=8384", "PGID=9999"]
+  env ['TZ="America/Los_Angeles"', "PUID=8384"]
   network_mode "host"
   volumes syncthing_volumes
   action :run
