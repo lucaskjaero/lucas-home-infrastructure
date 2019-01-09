@@ -14,25 +14,25 @@ user "syncthing" do
   manage_home false
 end
 
-directory "/config" do
+directory node["config_dir"] do
   owner "root"
   mode "0777"
   action :create
-  not_if { Dir.exist? "/config" }
+  not_if { Dir.exist? node["config_dir"] }
 end
-directory "/config/syncthing" do
-  owner "syncthing"
+directory "#{node["config_dir"]}/syncthing" do
+  owner node["sync"]["UID"]
   group "syncthing"
   mode "0777"
   action :create
-  not_if { Dir.exist? "/config/syncthing" }
+  not_if { Dir.exist? "#{node["config_dir"]}/syncthing" }
 end
-directory "/config/syncthing/#{node.name}" do
-  owner "syncthing"
+directory "#{node["config_dir"]}/syncthing/#{node.name}" do
+  owner node["sync"]["UID"]
   group "syncthing"
   mode "0777"
   action :create
-  not_if { Dir.exist? "/config/syncthing/#{node.name}" }
+  not_if { Dir.exist? "#{node["config_dir"]}/syncthing/#{node.name}" }
 end
 
 docker_image "Syncthing image" do
@@ -41,14 +41,14 @@ docker_image "Syncthing image" do
 end
 
 # Mount some default folders and then allow the user to add more
-default_mounts = ["/config/syncthing/#{node.name}:/config", "/config:/mnt/config/"]
+default_mounts = ["#{node["config_dir"]}/syncthing/#{node.name}:/config", "#{node["config_dir"]}:/mnt/config/"]
 user_passed_folders = node["sync"]["sync_directories"]
 syncthing_volumes = (default_mounts + user_passed_folders).uniq
 
 docker_container "Syncthing runtime" do
   container_name "syncthing"
   repo "linuxserver/syncthing"
-  env ['TZ="America/Los_Angeles"', "PUID=8384"]
+  env ['TZ="America/Los_Angeles"', "PUID=#{node["sync"]["UID"]}"]
   network_mode "host"
   volumes syncthing_volumes
   action :run
