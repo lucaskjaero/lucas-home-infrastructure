@@ -25,3 +25,7 @@ Policyfile.lock.json
 
 # Private keys
 .chef/*.pem
+
+# Random cruft
+.DS_Store
+.chef/syntaxcache
