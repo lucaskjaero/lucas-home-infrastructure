@@ -34,5 +34,5 @@ end
 git home_assistant_config_dir do
   repository 'git://github.com/lucaskjaero/lucas-home-automation.git'
   action :sync
-  notifies :redeploy, 'docker_container[homeassistant]', :immediately
+  notifies :restart, 'docker_container[homeassistant]', :immediately
 end
