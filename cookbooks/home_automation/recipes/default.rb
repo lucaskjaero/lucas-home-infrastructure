@@ -14,15 +14,9 @@ directory home_assistant_config_dir do
   not_if { Dir.exist? home_assistant_config_dir }
 end
 
-directory node["home_media_server"]["config_dir"] do
-  owner "root"
-  mode "0777"
-  action :create
-  not_if { Dir.exist? node["home_media_server"]["config_dir"] }
-end
-
 docker_image "homeassistant image" do
-  repo "homeassistant/home-assistant:stable"
+  repo "homeassistant/home-assistant"
+  tag "stable"
   action :pull
 end
 
