@@ -20,7 +20,7 @@ docker_image "homeassistant image" do
   action :pull
 end
 
-docker_container "homeassistant container" do
+docker_container "homeassistant" do
   container_name "home-assistant"
   repo "homeassistant/home-assistant"
   tag "stable"
@@ -29,4 +29,10 @@ docker_container "homeassistant container" do
   network_mode "host"
   restart_policy "unless-stopped"
   action :run
+end
+
+git home_assistant_config_dir do
+  repository 'git://github.com/lucaskjaero/lucas-home-automation.git'
+  action :sync
+  notifies :redeploy, 'docker_container[homeassistant]', :immediately
 end
