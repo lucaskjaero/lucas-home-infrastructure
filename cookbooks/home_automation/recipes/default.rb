@@ -28,7 +28,8 @@ end
 
 docker_container "homeassistant container" do
   container_name "home-assistant"
-  repo "homeassistant/home-assistant:stable"
+  repo "homeassistant/home-assistant"
+  tag "stable"
   volumes ["#{home_assistant_config_dir}:/config"]
   env ["TZ=America/Los_Angeles"]
   network_mode "host"
