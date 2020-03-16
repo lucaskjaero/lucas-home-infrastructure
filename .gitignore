@@ -36,3 +36,6 @@ clients/*
 containers/*
 cookbook_artifacts/*
 groups/*
+org.json
+members.json
+invitations.json
