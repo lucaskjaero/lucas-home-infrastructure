@@ -31,4 +31,5 @@ jobs:
       run: |
         ls
         ls .chef
+        cat .chef/lkjaero.pem
         knife upload .
