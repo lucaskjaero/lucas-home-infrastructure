@@ -29,3 +29,10 @@ Policyfile.lock.json
 # Random cruft
 .DS_Store
 .chef/syntaxcache
+
+# Things downloaded from chef server
+acls/*
+clients/*
+containers/*
+cookbook_artifacts/*
+groups/*
