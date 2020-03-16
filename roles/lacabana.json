@@ -5,9 +5,11 @@
   "default_attributes": {},
   "description": "The role for lacabana",
   "run_list": [
+    "recipe[lacabana]",
     "role[ubuntu_node]",
-    "recipe[file_sync]",
-    "recipe[file_sync::file_sharing]"
+    "role[docker_host]",
+    "role[file_sync]",
+    "recipe[backup]"
   ],
   "override_attributes": {}
 }
