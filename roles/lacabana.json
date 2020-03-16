@@ -3,7 +3,7 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {},
-  "description": "The base role for systems that serve HTTP traffic",
+  "description": "The role for lacabana",
   "run_list": [
     "role[ubuntu_node]",
     "recipe[file_sync]",
