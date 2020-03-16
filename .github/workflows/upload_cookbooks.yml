@@ -25,7 +25,9 @@ jobs:
     - name: Get chef server push credentials
       env:
         MANAGED_CHEF_PEM: ${{ secrets.MANAGED_CHEF_PEM }}
-      run: echo $MANAGED_CHEF_PEM > .chef/lkjaero.pem
+      run: |
+        echo $MANAGED_CHEF_PEM > .chef/lkjaero.pem
+        chmod 777 .chef/lkjaero.pem
 
     - name: Upload cookbooks
       run: |
