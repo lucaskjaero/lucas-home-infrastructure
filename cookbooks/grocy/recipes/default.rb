@@ -28,7 +28,7 @@ end
 docker_container "Grocy container" do
   container_name "grocy"
   repo "linuxserver/grocy"
-  port "9283:9283"
+  port "9283:80"
   volumes ["#{grocy_config_dir}:/config"]
   env ['TZ="America/Los_Angeles"']
   restart_policy "unless-stopped"
