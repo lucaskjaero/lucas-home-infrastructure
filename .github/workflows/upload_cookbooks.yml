@@ -29,7 +29,4 @@ jobs:
 
     - name: Upload cookbooks
       run: |
-        ls
-        ls .chef
-        cat .chef/lkjaero.pem
         knife upload .
