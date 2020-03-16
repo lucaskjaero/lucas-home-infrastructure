@@ -35,7 +35,10 @@ acls/*
 clients/*
 containers/*
 cookbook_artifacts/*
+environments/*
 groups/*
+nodes/*
+policy_groups
 org.json
 members.json
 invitations.json
