@@ -7,3 +7,4 @@ node_name                "lkjaero"
 client_key               "#{current_dir}/lkjaero.pem"
 chef_server_url          "https://api.chef.io/organizations/lucas-kjaero-home"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+editor                   "/usr/bin/nano"

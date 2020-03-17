@@ -1,0 +1,16 @@
+{
+  "name": "thelio",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The role for thelio",
+  "run_list": [
+    "recipe[thelio]",
+    "role[home_media_server]",
+    "role[file_share]",
+    "role[file_sync]",
+    "recipe[home_automation]",
+    "recipe[grocy]"
+  ],
+  "override_attributes": {}
+}

@@ -22,10 +22,19 @@ Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
 
-
-# Private keys
-.chef/*.pem
-
 # Random cruft
 .DS_Store
 .chef/syntaxcache
+
+# Things downloaded from chef server
+acls/*
+clients/*
+containers/*
+cookbook_artifacts/*
+environments/*
+groups/*
+nodes/*
+policy_groups
+org.json
+members.json
+invitations.json
