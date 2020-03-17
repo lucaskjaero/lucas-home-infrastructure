@@ -6,6 +6,7 @@
   "description": "The role for lucas-proxy",
   "run_list": [
     "role[linux_node]",
+    "role[docker_host]",
     "recipe[openvpn_server]"
   ],
   "override_attributes": {}
