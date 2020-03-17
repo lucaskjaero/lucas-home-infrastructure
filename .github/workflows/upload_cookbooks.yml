@@ -31,5 +31,4 @@ jobs:
 
     - name: Upload cookbooks
       run: |
-        ssh-keygen -l -f .chef/lkjaero.pem
         knife upload .
