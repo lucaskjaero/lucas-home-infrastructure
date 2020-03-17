@@ -31,5 +31,5 @@ jobs:
 
     - name: Upload cookbooks
       run: |
-        openssl x509 -inform PEM -in .chef/lkjaero.pem
+        ssh-keygen -l -f .chef/lkjaero.pem
         knife upload .
