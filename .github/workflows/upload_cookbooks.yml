@@ -1,7 +1,7 @@
 name: Upload cookbooks and roles to managed chef
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -22,6 +22,5 @@ jobs:
         wget https://packages.chef.io/files/stable/chefdk/4.7.73/ubuntu/18.04/chefdk_4.7.73-1_amd64.deb
         sudo dpkg -i chefdk_4.7.73-1_amd64.deb
 
-    - name: Upload cookbooks
-      run: |
-        knife upload .
+    - name: Upload cookbooks and roles
+      run: knife upload .
