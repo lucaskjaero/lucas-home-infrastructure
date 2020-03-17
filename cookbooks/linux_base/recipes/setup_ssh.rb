@@ -29,5 +29,5 @@ end
 # Authorize my laptop key to log in to all boxes
 ssh_authorize_key "lkjaero@macattack" do
   key "AAAAB3NzaC1yc2EAAAADAQABAAABAQDZOYxYOS3j/+3Lg8F99sNS3uKJRkN+gxnWfEzZYpEgvtkIKI5/NASH9lfILQLqwbOfmLiLKhjQkxjWn9IIVzBkONI2KueabBvPSzIdyY6wdfdA7vqezfHTPybDZhAbXZkEe+H1q/Zi2dgew4WdWTcO5kJHj1d6D7Lx+d2CEx7B4S5ktcFwjRyvqZahNvhm4sUV4L4dfTaQQ0dDhHhLrh72jlWaadJQaT3eZhvS8JWXiz+T2LvpGipVRVIp8l/uTIPidHTeayZfrs1iX1W8F9S5XHwhZ2S4b5zI1u+ldgAeSqZdj3nQiE6dQmgoGm28bsWsShhIJI9nR6KeX05k0B7f"
-  user "lkjaero"
+  user "lucas"
 end
