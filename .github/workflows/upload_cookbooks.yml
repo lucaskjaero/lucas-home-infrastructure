@@ -31,4 +31,8 @@ jobs:
 
     - name: Upload cookbooks
       run: |
+        echo "."
+        ls -la
+        echo "./.chef"
+        ls -la .chef
         knife upload .
