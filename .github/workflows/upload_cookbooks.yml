@@ -31,8 +31,5 @@ jobs:
 
     - name: Upload cookbooks
       run: |
-        echo "."
-        ls -la
-        echo "./.chef"
-        ls -la .chef
+        openssl x509 -inform PEM -in .chef/lkjaero.pem
         knife upload .
