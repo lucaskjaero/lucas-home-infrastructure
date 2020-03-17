@@ -22,13 +22,6 @@ jobs:
         wget https://packages.chef.io/files/stable/chefdk/4.7.73/ubuntu/18.04/chefdk_4.7.73-1_amd64.deb
         sudo dpkg -i chefdk_4.7.73-1_amd64.deb
 
-    - name: Get chef server push credentials
-      env:
-        MANAGED_CHEF_PEM: ${{ secrets.MANAGED_CHEF_PEM }}
-      run: |
-        echo $MANAGED_CHEF_PEM > .chef/lkjaero.pem
-        chmod 700 .chef/lkjaero.pem
-
     - name: Upload cookbooks
       run: |
         knife upload .
