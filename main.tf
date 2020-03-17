@@ -23,3 +23,15 @@ resource "digitalocean_droplet" "lucas_proxy" {
   ssh_keys   = [26855236]
   monitoring = true
 }
+
+resource "digitalocean_firewall" "lucas_proxy_firewall" {
+  name = "lucas-proxy-firewall"
+
+  droplet_ids = [digitalocean_droplet.lucas_proxy.id]
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "22"
+    source_addresses = ["0.0.0.0/32"]
+  }
+}
