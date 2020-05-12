@@ -10,7 +10,7 @@
     "role[file_share]",
     "role[file_sync]",
     "recipe[home_automation]",
-    "recipe[grocy]"
+    "recipe[pi_hole]"
   ],
   "override_attributes": {}
 }
