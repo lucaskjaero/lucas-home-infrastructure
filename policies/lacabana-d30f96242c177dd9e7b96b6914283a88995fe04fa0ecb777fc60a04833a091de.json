@@ -1,0 +1,226 @@
+{
+  "run_list": [
+    "recipe[linux_base::default]",
+    "recipe[ubuntu_desktop_base::default]",
+    "recipe[file_sync::default]",
+    "recipe[file_sync::file_sharing]"
+  ],
+  "cookbook_locks": {
+    "docker": {
+      "version": "4.9.0",
+      "identifier": "282e21fbeabb1e9cf011b8e3f98fa4e8730c95a6",
+      "dotted_decimal_identifier": "11309722563689246.44174055273920911.181318269572518",
+      "cache_key": "docker-4.9.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.0/download",
+        "version": "4.9.0"
+      }
+    },
+    "docker_base": {
+      "version": "0.1.0",
+      "identifier": "18cc5803ed4a960e976ca849b3b13557dc872db8",
+      "dotted_decimal_identifier": "6980077836126870.4107142609613745.58651478273464",
+      "source": "../../cookbooks/docker_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "afa9c409228da8c12c1647222dda222f60aca680",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/docker_base"
+      }
+    },
+    "file_sync": {
+      "version": "0.1.0",
+      "identifier": "aad278f2259e45b5479f2290da49c973156f18c5",
+      "dotted_decimal_identifier": "48082162941271621.51025719589919305.221496118024389",
+      "source": "../../cookbooks/file_sync",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "afa9c409228da8c12c1647222dda222f60aca680",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/file_sync"
+      }
+    },
+    "linux_base": {
+      "version": "0.1.0",
+      "identifier": "9dc073ce93ec02770c4dff8dcdd9a8a0dc95c05d",
+      "dotted_decimal_identifier": "44403174963145730.33509051368066521.185408849035357",
+      "source": "../../cookbooks/linux_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "afa9c409228da8c12c1647222dda222f60aca680",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/linux_base"
+      }
+    },
+    "samba": {
+      "version": "1.2.0",
+      "identifier": "957c50314939012da3e69539fe9d00a6ef0cc0cf",
+      "dotted_decimal_identifier": "42076455395997953.12846584693391005.716975161551",
+      "cache_key": "samba-1.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/1.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/1.2.0/download",
+        "version": "1.2.0"
+      }
+    },
+    "ssh_authorized_keys": {
+      "version": "0.4.0",
+      "identifier": "37ef9028f0b5197c975f7701cb584f2a60c87e21",
+      "dotted_decimal_identifier": "15744526160278809.35069333386414936.87043430972961",
+      "cache_key": "ssh_authorized_keys-0.4.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/0.4.0/download",
+        "version": "0.4.0"
+      }
+    },
+    "sshd": {
+      "version": "2.0.0",
+      "identifier": "c2f3990aa25f60797a2d03eca5eb2ebf6dbbe1c4",
+      "dotted_decimal_identifier": "54873984115826528.34192805939946987.51399714660804",
+      "cache_key": "sshd-2.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/2.0.0/download",
+        "version": "2.0.0"
+      }
+    },
+    "ubuntu_desktop_base": {
+      "version": "0.1.0",
+      "identifier": "8e001ddaba9dc716a0ad4a235efa4e98beffd683",
+      "dotted_decimal_identifier": "39969574916627911.6369115621252858.86417946433155",
+      "source": "../../cookbooks/ubuntu_desktop_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/lucaskjaero/lucas-home-infrastructure.git",
+        "revision": "afa9c409228da8c12c1647222dda222f60aca680",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/ubuntu_desktop_base"
+      }
+    }
+  },
+  "included_policy_locks": [
+
+  ],
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "docker",
+        "= 4.9.0"
+      ],
+      [
+        "docker_base",
+        ">= 0.0.0"
+      ],
+      [
+        "file_sync",
+        ">= 0.0.0"
+      ],
+      [
+        "linux_base",
+        ">= 0.0.0"
+      ],
+      [
+        "samba",
+        "= 1.2.0"
+      ],
+      [
+        "ssh_authorized_keys",
+        "= 0.4.0"
+      ],
+      [
+        "sshd",
+        "= 2.0.0"
+      ],
+      [
+        "ubuntu_desktop_base",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "docker (4.9.0)": [
+
+      ],
+      "docker_base (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ]
+      ],
+      "file_sync (0.1.0)": [
+        [
+          "docker_base",
+          ">= 0.0.0"
+        ],
+        [
+          "samba",
+          ">= 0.0.0"
+        ]
+      ],
+      "linux_base (0.1.0)": [
+        [
+          "samba",
+          ">= 0.0.0"
+        ],
+        [
+          "ssh_authorized_keys",
+          ">= 0.0.0"
+        ],
+        [
+          "sshd",
+          ">= 0.0.0"
+        ]
+      ],
+      "samba (1.2.0)": [
+
+      ],
+      "ssh_authorized_keys (0.4.0)": [
+
+      ],
+      "sshd (2.0.0)": [
+
+      ],
+      "ubuntu_desktop_base (0.1.0)": [
+
+      ]
+    }
+  }
+}

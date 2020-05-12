@@ -1,0 +1,13 @@
+{
+  "name": "proxy",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "The role for lucas-proxy",
+  "run_list": [
+    "role[linux_node]",
+    "role[docker_host]",
+    "recipe[openvpn_server]"
+  ],
+  "override_attributes": {}
+}
