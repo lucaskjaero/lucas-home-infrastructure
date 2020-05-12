@@ -1,0 +1,10 @@
+name 'pi_hole'
+maintainer 'Lucas Kjaero'
+maintainer_email 'you@example.com'
+license 'All Rights Reserved'
+description 'Installs/Configures a pi-hole DNS server'
+long_description 'Installs/Configures ma pi-hole DNS server'
+version '0.1.0'
+chef_version '>= 13.0'
+
+depends 'docker'
