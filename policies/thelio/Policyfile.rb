@@ -19,7 +19,6 @@ default["home_media_server"] = {
     timezone: 'TZ="America/Los_Angeles"',
 }
 
-default["home_media_server"]["jackett"]["enabled"] = true
 default["home_media_server"]["lidarr"]["enabled"] = true
 default["home_media_server"]["radarr"]["enabled"] = true
 default["home_media_server"]["sonarr"]["enabled"] = true
