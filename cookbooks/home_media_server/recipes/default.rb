@@ -36,6 +36,9 @@ include_recipe "::plex"
 bazarr = node["home_media_server"]["bazarr"]["enabled"]
 include_recipe "::bazarr" if bazarr
 
+jackett = node["home_media_server"]["jackett"]["enabled"]
+include_recipe "::jackett" if jackett
+
 lidarr = node["home_media_server"]["lidarr"]["enabled"]
 include_recipe "::lidarr" if lidarr
 
