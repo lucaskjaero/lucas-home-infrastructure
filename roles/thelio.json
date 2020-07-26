@@ -10,6 +10,7 @@
     "role[file_share]",
     "role[file_sync]",
     "recipe[home_automation]",
+    "recipe[elasticsearch]",
     "recipe[pi_hole]"
   ],
   "override_attributes": {}
