@@ -39,9 +39,6 @@ include_recipe "::bazarr" if bazarr
 jackett = node["home_media_server"]["jackett"]["enabled"]
 include_recipe "::jackett" if jackett
 
-lidarr = node["home_media_server"]["lidarr"]["enabled"]
-include_recipe "::lidarr" if lidarr
-
 radarr = node["home_media_server"]["radarr"]["enabled"]
 include_recipe "::radarr" if radarr
 

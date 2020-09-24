@@ -52,7 +52,7 @@ docker_container "Pihole container" do
   repo "pihole/pihole"
   tag "latest"
   volumes ["#{pihole_config_dir}/etc-pihole:/etc/pihole/", "#{pihole_config_dir}/etc-dnsmasq.d:/etc/dnsmasq.d/"]
-  env ['TZ="America/Los_Angeles"', 'WEBPASSWORD="PIHOLE#1"']
+  env ['TZ="America/Los_Angeles"', 'WEBPASSWORD="PIHOLE#1"', 'ServerIP=192.168.50.167']
   network_mode "host"
   dns ['127.0.0.1', '1.1.1.1']
   cap_add 'NET_ADMIN'
