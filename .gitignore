@@ -20,7 +20,6 @@ cookbooks/*/.delivery/*
 # Chef
 Berksfile.lock
 .zero-knife.rb
-Policyfile.lock.json
 
 # Random cruft
 .DS_Store
