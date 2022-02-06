@@ -7,6 +7,9 @@
 # Set up ssh server
 include_recipe "::setup_ssh"
 
+# Block repeat password attempts
+include_recipe "::fail2ban"
+
 apt_update "daily apt update" do
   frequency 86400
   action :periodic
