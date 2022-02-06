@@ -1,0 +1,309 @@
+{
+  "revision_id": "038aaeda455b2ea5eaf9a2d2e5307a780e9e516343f7df4eb2a94845d71a8666",
+  "name": "thelio",
+  "run_list": [
+    "recipe[linux_base::default]",
+    "recipe[docker_base::default]",
+    "recipe[home_media_server::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apt": {
+      "version": "7.4.2",
+      "identifier": "eb6d17bcea84f3f6fae7128626b6d24e9b8b7dba",
+      "dotted_decimal_identifier": "66266568248165619.69518714625992374.231235058892218",
+      "cache_key": "apt-7.4.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.4.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.4.2/download",
+        "version": "7.4.2"
+      }
+    },
+    "docker": {
+      "version": "10.1.7",
+      "identifier": "8be21c1d5cd30d37d927bb58f0ab5a75bd279b8c",
+      "dotted_decimal_identifier": "39373632142365453.15719888389206187.99461731163020",
+      "cache_key": "docker-10.1.7-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/10.1.7/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/10.1.7/download",
+        "version": "10.1.7"
+      }
+    },
+    "docker_base": {
+      "version": "0.1.0",
+      "identifier": "cf2aef1923b06e4dd82dc905e29d2a6e843c51ed",
+      "dotted_decimal_identifier": "58312526586425454.21911264364454557.46654153314797",
+      "source": "../../cookbooks/docker_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "647302b970a1243e8188927e6e2ac8636d10c194",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/docker_base"
+      }
+    },
+    "fuse": {
+      "version": "0.1.2",
+      "identifier": "198b3fac1a1d7c4cbda3df537e89b5495ac9de32",
+      "dotted_decimal_identifier": "7189980004359548.21600609754119817.199326660419122",
+      "cache_key": "fuse-0.1.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/fuse/versions/0.1.2/download",
+        "version": "0.1.2"
+      }
+    },
+    "home_media_server": {
+      "version": "0.1.0",
+      "identifier": "db5d603c9ce311a6b3b773f258f4aa2ce1c6bb35",
+      "dotted_decimal_identifier": "61745687814791953.46922446639618292.187109743180597",
+      "source": "../../cookbooks/home_media_server",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "647302b970a1243e8188927e6e2ac8636d10c194",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/home_media_server"
+      }
+    },
+    "line": {
+      "version": "4.4.2",
+      "identifier": "29d07ee7f5a8fa5754c630d0f74b0b225804d796",
+      "dotted_decimal_identifier": "11769717521230074.24581533173086027.12242133505942",
+      "cache_key": "line-4.4.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/4.4.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/line/versions/4.4.2/download",
+        "version": "4.4.2"
+      }
+    },
+    "linux_base": {
+      "version": "0.1.0",
+      "identifier": "67d920bfa250242adda8369e72bccb948bbf7b24",
+      "dotted_decimal_identifier": "29230657278464036.12065663562445500.223838860180260",
+      "source": "../../cookbooks/linux_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "647302b970a1243e8188927e6e2ac8636d10c194",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../../cookbooks/linux_base"
+      }
+    },
+    "samba": {
+      "version": "2.0.4",
+      "identifier": "7e5d602fb06816e5004c16f9b6bec7e319a15ded",
+      "dotted_decimal_identifier": "35568514763876374.64458096469718718.219778201509357",
+      "cache_key": "samba-2.0.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/2.0.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/samba/versions/2.0.4/download",
+        "version": "2.0.4"
+      }
+    },
+    "ssh_authorized_keys": {
+      "version": "1.0.0",
+      "identifier": "dcf4b256c2b1d2761127857df178ae176f5985ce",
+      "dotted_decimal_identifier": "62193541673300434.33232908692877688.191415675618766",
+      "cache_key": "ssh_authorized_keys-1.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/1.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ssh_authorized_keys/versions/1.0.0/download",
+        "version": "1.0.0"
+      }
+    },
+    "sshd": {
+      "version": "3.1.1",
+      "identifier": "4453df2db56a7942406baf26a487265f7bf57005",
+      "dotted_decimal_identifier": "19232516426001017.18648179707126919.42191543431173",
+      "cache_key": "sshd-3.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/3.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sshd/versions/3.1.1/download",
+        "version": "3.1.1"
+      }
+    },
+    "yum": {
+      "version": "7.3.2",
+      "identifier": "b18c656b7a06a41d5f02299e988c17f198cb703c",
+      "dotted_decimal_identifier": "49975438100530852.8267237217441932.26326418026556",
+      "cache_key": "yum-7.3.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/7.3.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/7.3.2/download",
+        "version": "7.3.2"
+      }
+    }
+  },
+  "default_attributes": {
+    "home_media_server": {
+      "config_dir": "/config",
+      "download_dir": "/seedbox",
+      "media_dir": "/video",
+      "timezone": "TZ=\"America/Los_Angeles\"",
+      "jackett": {
+        "enabled": true
+      },
+      "lidarr": {
+        "enabled": true
+      },
+      "radarr": {
+        "enabled": true
+      },
+      "sonarr": {
+        "enabled": true
+      },
+      "seedbox": {
+        "enabled": true,
+        "remote_host": "euclid.whatbox.ca",
+        "remote_path": "/home/sanjid/files",
+        "remote_username": "sanjid"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apt",
+        "= 7.4.2"
+      ],
+      [
+        "docker",
+        "= 10.1.7"
+      ],
+      [
+        "docker_base",
+        ">= 0.0.0"
+      ],
+      [
+        "fuse",
+        "= 0.1.2"
+      ],
+      [
+        "home_media_server",
+        ">= 0.0.0"
+      ],
+      [
+        "line",
+        "= 4.4.2"
+      ],
+      [
+        "linux_base",
+        ">= 0.0.0"
+      ],
+      [
+        "samba",
+        "= 2.0.4"
+      ],
+      [
+        "ssh_authorized_keys",
+        "= 1.0.0"
+      ],
+      [
+        "sshd",
+        "= 3.1.1"
+      ],
+      [
+        "yum",
+        "= 7.3.2"
+      ]
+    ],
+    "dependencies": {
+      "apt (7.4.2)": [
+
+      ],
+      "docker (10.1.7)": [
+
+      ],
+      "docker_base (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ]
+      ],
+      "fuse (0.1.2)": [
+        [
+          "apt",
+          ">= 0.0.0"
+        ],
+        [
+          "yum",
+          ">= 0.0.0"
+        ]
+      ],
+      "home_media_server (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ],
+        [
+          "fuse",
+          ">= 0.0.0"
+        ],
+        [
+          "line",
+          ">= 0.0.0"
+        ]
+      ],
+      "line (4.4.2)": [
+
+      ],
+      "linux_base (0.1.0)": [
+        [
+          "samba",
+          ">= 0.0.0"
+        ],
+        [
+          "ssh_authorized_keys",
+          ">= 0.0.0"
+        ],
+        [
+          "sshd",
+          ">= 0.0.0"
+        ]
+      ],
+      "samba (2.0.4)": [
+
+      ],
+      "ssh_authorized_keys (1.0.0)": [
+
+      ],
+      "sshd (3.1.1)": [
+
+      ],
+      "yum (7.3.2)": [
+
+      ]
+    }
+  }
+}
